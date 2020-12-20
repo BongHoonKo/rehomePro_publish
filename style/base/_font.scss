@@ -1,0 +1,22 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+html,body {
+    width: 100%;
+    font-size: 16px;
+    font-weight: normal;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: black;
+    letter-spacing: normal;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+
+    @include respond-to(max-width, con) {
+        height: 100%;
+    }
+    @include respond-to(max-width, 720px) {
+        font-size: 14px;
+    }
+    @include respond-to(max-width, 450px) {
+        font-size: 12px;
+    }
+}

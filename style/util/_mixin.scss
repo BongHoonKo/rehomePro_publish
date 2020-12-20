@@ -1,0 +1,48 @@
+@mixin textoverflow() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+@mixin multiline($n) {
+    display: -webkit-box;
+    -webkit-line-clamp: $n;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+@mixin clearfix() {
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+@mixin respond-to($type, $width) {
+    @if $width == 'con' {
+        @media all and ($type : 1254px) {
+            @content;
+        }
+    }
+    @else {
+        @media all and ($type : $width) {
+            @content;
+        }
+    };
+}
+
+
+@mixin ie-flex($float: left, $flex-amount: nil, $max-flex: nil) {
+    .ie9 & {
+        @if($float == right) {
+            float: right;
+        }
+        @else {
+            float: left;
+        }
+        /*@if $flex-amount != nil {
+            $percentage: $flex-amount / $max-flex;
+            width: $percentage * 100%;
+        }*/
+        @content;
+    }
+}

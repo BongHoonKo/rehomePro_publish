@@ -1,0 +1,117 @@
+.logo-hd {
+    text-align: center;
+    margin-top: 3.75rem;
+    @include respond-to(max-width, con) {
+        display: none;
+    }
+    .logo {
+        & > img {
+            width: 4.5rem;
+            height: auto;
+        }
+    }
+}
+.header {
+    background-color: white;
+    z-index: 200;
+    padding-top: 5.625rem;
+    @include respond-to(max-width, con) {
+        padding-top: 0;
+    }
+    .hd-wrap {
+        border-bottom: 1px solid #ebebeb;
+        background-color: white;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 200;
+        @include respond-to(max-width, con) {
+            display: none;
+        }
+    }
+    .layout {
+        justify-content: space-between;
+        height: 5.625rem;
+    }
+    .logo {
+        & > a {
+            & > img {
+                width: 2.625rem;
+                height: auto;
+                margin-top: 0.25rem;
+            }
+        }
+    }
+    .header-title {
+        padding: 4.1875rem 0;
+        text-align: center;
+        background-color: white;
+        font-size: 1.625rem;
+        font-weight: 500;
+        color: black;
+        border-bottom: 1px solid #E3E3E3;
+        position: relative;
+        .back-btn {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 4rem;
+            & > img {
+                width: 0.75rem;
+                height: auto;
+            }
+        }
+        @include respond-to(max-width, con) {
+            padding: 1.25rem 0;
+            font-size: 1.333rem;
+            .back-btn {
+                display: block;
+            }
+        }
+    }
+    .main-nav {
+        height: 100%;
+        .main-nav__list {
+            height: 100%;
+            & > li {
+                height: 100%;
+                & > a {
+                    font-weight: normal;
+                    font-size: 1.125rem;
+                    height: 100%;
+                    padding: 0 4.375rem;
+                    display: block;
+                    & > span {
+                        display: inline-flex;
+                        align-items: center;
+                        position: relative;
+                        height: 100%;
+                    }
+                    &.active, &:hover, &:focus {
+                        color: $main-color;
+                        font-weight: 500;
+                        & > span {
+                            &::after {
+                                content: '';
+                                width: 100%;
+                                height: 0.25rem;
+                                background-color: $main-color;
+                                display: block;
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .menu-btn {
+        width: 5.625rem;
+        height: 100%;
+        cursor: pointer;
+    }
+}
