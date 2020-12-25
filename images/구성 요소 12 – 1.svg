@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="19.588" height="19.343" viewBox="0 0 19.588 19.343">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fafafa;
+        stroke: #606060;
+        stroke-linejoin: round;
+      }
+    </style>
+  </defs>
+  <g id="구성_요소_12_1" data-name="구성 요소 12 – 1" transform="translate(0.5 0.5)">
+    <g id="그룹_1182" data-name="그룹 1182" transform="translate(299.747 403.95) rotate(180)">
+      <path id="패스_2229" data-name="패스 2229" class="cls-1" d="M290.452,385.607l-9.294,5.366,9.294,5.366,9.294-5.366Z"/>
+      <path id="패스_2230" data-name="패스 2230" class="cls-1" d="M290.452,397.336l-9.294,5.366,9.294,5.366,9.294-5.366Z" transform="translate(0 -8.059)"/>
+      <path id="패스_2231" data-name="패스 2231" class="cls-1" d="M290.452,409.933l-9.294,5.366,9.294,5.366,9.294-5.366Z" transform="translate(0 -16.715)"/>
+    </g>
+  </g>
+</svg>

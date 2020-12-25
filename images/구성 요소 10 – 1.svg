@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="18.465" height="18.465" viewBox="0 0 18.465 18.465">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #606060;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        fill: #606060;
+      }
+    </style>
+  </defs>
+  <g id="구성_요소_10_1" data-name="구성 요소 10 – 1" transform="translate(0.5 0.5)">
+    <rect id="사각형_1876" data-name="사각형 1876" class="cls-1" width="8.733" height="11.458" transform="translate(8.732 6.007)"/>
+    <rect id="사각형_1877" data-name="사각형 1877" class="cls-1" width="8.733" height="17.465"/>
+    <g id="그룹_808" data-name="그룹 808" transform="translate(12.236 9.177)">
+      <rect id="사각형_1880" data-name="사각형 1880" class="cls-2" width="1.5" height="1.5" transform="translate(0 3.393)"/>
+      <rect id="사각형_1881" data-name="사각형 1881" class="cls-2" width="1.5" height="1.5" transform="translate(0 0)"/>
+    </g>
+    <g id="그룹_812" data-name="그룹 812" transform="translate(3.504 3.337)">
+      <rect id="사각형_1878" data-name="사각형 1878" class="cls-2" width="1.5" height="1.5" transform="translate(0 3.393)"/>
+      <rect id="사각형_1879" data-name="사각형 1879" class="cls-2" width="1.5" height="1.5"/>
+      <rect id="사각형_1882" data-name="사각형 1882" class="cls-2" width="1.5" height="1.5" transform="translate(0 6.786)"/>
+    </g>
+  </g>
+</svg>

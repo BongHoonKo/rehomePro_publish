@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="10.592" height="16.737" viewBox="0 0 10.592 16.737">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #fff;
+        stroke-width: 0.5px;
+      }
+    </style>
+  </defs>
+  <g id="Icon_Keyboard_Arrow_-_Up_Dark" data-name="Icon / Keyboard Arrow - Up / Dark" transform="translate(10.239 0.354) rotate(90)">
+    <path id="Icon_Keyboard_Arrow_-_Up_Dark-2" data-name="Icon / Keyboard Arrow - Up / Dark" class="cls-1" d="M14.16,9.885,8.015,3.74,1.87,9.885,0,8.015,8.015,0,16.03,8.015Z" transform="translate(16.03 9.885) rotate(180)"/>
+  </g>
+</svg>

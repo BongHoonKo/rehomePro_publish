@@ -891,17 +891,14 @@ html, body {
 .logo-hd {
   text-align: center;
   margin-top: 3.75rem;
-}
-
-@media all and (max-width: 1254px) {
-  .logo-hd {
-    display: none;
-  }
+  /*@include respond-to(max-width, con) {
+        display: none;
+    }*/
 }
 
 .logo-hd .logo > img {
-  width: 4.5rem;
-  height: auto;
+  width: auto;
+  height: 0.875rem;
 }
 
 .header {
@@ -1953,4 +1950,130 @@ html, body {
   padding: 1.625rem;
   height: 18.75rem;
   overflow-y: auto;
+}
+
+.reg-layout {
+  margin-top: 9.2rem;
+  margin-bottom: 4.2rem;
+}
+
+@media all and (max-width: 1254px) {
+  .reg-layout {
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+}
+
+.register-box {
+  padding: 2.625rem 0;
+}
+
+.register-box:first-child {
+  border-right: 1px solid #e3e3e3;
+}
+
+@media all and (max-width: 1254px) {
+  .register-box:first-child {
+    border-bottom: 1px solid #e3e3e3;
+    border-right: 0;
+  }
+}
+
+.register-box .register-box__contents > p {
+  font-size: 1.3125rem;
+  position: relative;
+  font-weight: normal;
+}
+
+@media all and (max-width: 1254px) {
+  .register-box .register-box__contents > p {
+    width: 100%;
+    padding: 0 1.5rem;
+  }
+}
+
+.register-box .register-box__contents > p > b {
+  display: block;
+  min-height: 1.9375rem;
+}
+
+.register-box .register-box__contents > p .btn {
+  width: 18.125rem;
+  height: 3.75rem;
+  margin-top: 1.75rem;
+}
+
+@media all and (max-width: 1254px) {
+  .register-box .register-box__contents > p .btn {
+    width: 100%;
+    border-radius: 4px;
+  }
+}
+
+.register-box .register-box__contents > p .tooltip {
+  position: absolute;
+  bottom: -2rem;
+  font-size: 0.75rem;
+  color: #c3c3c3;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+@media all and (max-width: 1254px) {
+  .register-box .register-box__contents > p .tooltip {
+    font-size: 1rem;
+  }
+}
+
+.appdown-layout {
+  padding: 2.875rem;
+  background-color: #EFEFEF;
+  margin-bottom: 8.25rem;
+}
+
+@media all and (max-width: 1254px) {
+  .appdown-layout {
+    margin: 0;
+  }
+  .appdown-layout .down-contents {
+    flex-direction: column;
+  }
+}
+
+.appdown-layout .down-contents > img {
+  width: 11.6875rem;
+  height: auto;
+  margin-right: 6.75rem;
+}
+
+@media all and (max-width: 1254px) {
+  .appdown-layout .down-contents > img {
+    margin-right: 0;
+  }
+}
+
+@media all and (max-width: 1254px) {
+  .appdown-layout .down-txt {
+    text-align: center;
+    margin-top: 2rem;
+  }
+}
+
+.appdown-layout .down-txt > p {
+  font-size: 1.375rem;
+  margin-bottom: 1.75rem;
+}
+
+.appdown-layout .down-txt > p > b {
+  display: block;
+}
+
+.appdown-layout .down-txt .btn-wrap > a:first-child {
+  margin-right: 1rem;
+}
+
+.appdown-layout .down-txt .btn-wrap > a > img {
+  width: 8.6875rem;
+  height: auto;
 }

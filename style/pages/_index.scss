@@ -1,0 +1,102 @@
+.reg-layout {
+    margin-top: 9.2rem;
+    margin-bottom: 4.2rem;
+    @include respond-to(max-width, con) {
+        margin-top: 2rem;
+        flex-wrap: wrap;
+    }
+}
+.register-box {
+    padding: 2.625rem 0;
+    &:first-child {
+        border-right: 1px solid #e3e3e3;
+    }
+    @include respond-to(max-width, con) {
+        &:first-child {
+            border-bottom: 1px solid #e3e3e3;
+            border-right: 0;
+        }
+    }
+    .register-box__contents {
+        & > p {
+            font-size: 1.3125rem;
+            position: relative;
+            font-weight: normal;
+            @include respond-to(max-width, con) {
+                width: 100%;
+                padding: 0 1.5rem;
+            }
+            & > b {
+                display: block;
+                min-height: 1.9375rem;
+            }
+            .btn {
+                width: 18.125rem;
+                height: 3.75rem;
+                margin-top: 1.75rem;
+                @include respond-to(max-width, con) {
+                    width: 100%;
+                    border-radius: 4px;
+                }
+            }
+            .tooltip {
+                position: absolute;
+                bottom: -2rem;
+                font-size: 0.75rem;
+                color: #c3c3c3;
+                display: block;
+                width: 100%;
+                text-align: center;
+                @include respond-to(max-width, con) {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+.appdown-layout {
+    padding: 2.875rem;
+    background-color: #EFEFEF;
+    margin-bottom: 8.25rem;
+    @include respond-to(max-width, con) {
+        margin: 0;
+        .down-contents {
+            flex-direction: column;
+        }
+    }
+    .down-contents {
+        & > img {
+            width: 11.6875rem;
+            height: auto;
+            margin-right: 6.75rem;
+            @include respond-to(max-width, con) {
+                margin-right: 0;
+            }
+        }
+    }
+    .down-txt {
+        @include respond-to(max-width, con) {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        & > p {
+            font-size: 1.375rem;
+            margin-bottom: 1.75rem;
+            & > b {
+                display: block;
+            }
+        }
+        .btn-wrap {
+            & > a {
+                &:first-child {
+                    margin-right: 1rem;
+                }
+                & > img {
+                    width: 8.6875rem;
+                    height: auto;
+                }
+            }
+        }
+    }
+}

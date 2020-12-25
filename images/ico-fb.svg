@@ -1,0 +1,13 @@
+<svg id="구성_요소_13_1" data-name="구성 요소 13 – 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15.849" height="15.786" viewBox="0 0 15.849 15.786">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="15.849" height="15.786" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="반복_그리드_1" data-name="반복 그리드 1" clip-path="url(#clip-path)">
+    <g id="그룹_13" data-name="그룹 13">
+      <path id="패스_959" data-name="패스 959" d="M1.132,0H14.717a1.132,1.132,0,0,1,1.132,1.132V14.59a1.132,1.132,0,0,1-1.132,1.132H1.132A1.132,1.132,0,0,1,0,14.59V1.132A1.132,1.132,0,0,1,1.132,0Z" fill="#fff"/>
+      <path id="패스_958" data-name="패스 958" d="M438.5,94.828v1.515h2.4l-.316,2.463H438.5v6.062h-2.526V98.806h-2.021V96.344h2.021V94.2c0-3.662,4.925-2.652,4.925-2.652v2.147h-1.263C438.252,93.692,438.5,94.828,438.5,94.828Z" transform="translate(-427.518 -89.082)" fill="#3a5ca9"/>
+    </g>
+  </g>
+</svg>

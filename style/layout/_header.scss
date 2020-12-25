@@ -1,13 +1,13 @@
 .logo-hd {
     text-align: center;
     margin-top: 3.75rem;
-    @include respond-to(max-width, con) {
+    /*@include respond-to(max-width, con) {
         display: none;
-    }
+    }*/
     .logo {
         & > img {
-            width: 4.5rem;
-            height: auto;
+            width: auto;
+            height: 0.875rem;
         }
     }
 }
