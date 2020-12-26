@@ -1,3 +1,5 @@
+'use strict';
+
 window.addEventListener("DOMContentLoaded", () => {
     const tabs = document.querySelectorAll('[role="tab"]');
     const tabList = document.querySelector('[role="tablist"]');
@@ -88,7 +90,7 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
 
-  closeModal = function(e) {
+  let closeModal = function(e) {
     e.currentTarget.closest('.modal').classList.remove('active');
   }
 

@@ -1,13 +1,17 @@
+.wrap:not(.reg-wrap) {
+    .logo-hd {
+        @include respond-to(max-width, con) {
+            display: none;
+        }
+    }
+}
 .logo-hd {
     text-align: center;
     margin-top: 3.75rem;
-    /*@include respond-to(max-width, con) {
-        display: none;
-    }*/
     .logo {
         & > img {
-            width: auto;
-            height: 0.875rem;
+            width: 15rem;
+            height: auto;
         }
     }
 }
@@ -36,7 +40,7 @@
     .logo {
         & > a {
             & > img {
-                width: 2.625rem;
+                width: 11rem;
                 height: auto;
                 margin-top: 0.25rem;
             }

@@ -2,6 +2,7 @@
     background-color: #414141;
     padding-top: 2.5rem;
     padding-bottom: 4.375rem;
+    margin-top: auto;
     @include respond-to(max-width, con) {
         display: none;
     }

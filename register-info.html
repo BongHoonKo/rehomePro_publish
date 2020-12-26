@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="kr">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <meta name="robots" content="index,follow"/>
+        <meta name="theme-color" content="#B51E24">
+        <meta name="description" content="리홈 - Real Home"/>
+        <meta name="keywords" content=""/>
+        <meta name="author" content="리홈"/>
+        <meta property="og:title" content="리홈"/>
+        <meta property="og:description" content="">
+        <meta property="og:site_name" content="리홈"/>
+        <meta property="og:type" content="website"/>
+        <!-- <meta property="og:url" content=""/> -->
+        <meta property="og:image" content="/images/og-image.jpg"/>
+        <link rel="stylesheet" href="style/app.css"/>
+        <link rel="stylesheet" href="style/swiper.css"/>
+        <script src="js/swiper.min.js"></script>
+        <script src="js/global.js"></script>
+        <title>리홈</title>
+    </head>
+    <body>
+        <div class="wrap">
+
+            <!-- 헤더 -->
+            <header class="logo-hd">
+                <h1 class="logo">
+                    <img src="./images/logo.svg" title="Real Home 로고" alt="Real Home" />
+                </h1>
+            </header>
+
+            <!-- 회원가입 정보 입력 -->
+            <div class="layout register-layout">
+                <div class="container">
+                    <!-- 상세정보 입력 -->
+                    <section class="input-section">
+                        <h4 class="input-section__title">상세정보를 입력해 주세요</h4>
+                        <form class="form">
+                            <fieldset>
+                                <label class="f-label" for="f-name">이름</label>
+                                <input type="text" name="myname" class="f-input" id="f-email" value=""/>
+                            </fieldset>
+                            <fieldset>
+                                <label class="f-label" for="f-name">이메일</label>
+                                <input type="email" name="myemail" class="f-input" id="f-email" value=""/>
+                            </fieldset>
+                            <fieldset>
+                                <label class="f-label" for="f-phone">전화번호</label>
+                                <input type="tel" name="myemail" class="f-input" id="f-phone" value=""/>
+                            </fieldset>
+
+                            <fieldset>
+                                <label class="f-label" for="f-addr">주소</label>
+                                <input type="text" name="myaddr" class="f-input" id="f-addr" placeholder="주소 입력" value=""/>
+                                <label class="f-label" for="f-addr2" hidden>상세주소</label>
+                                <input type="text" name="myaddr2" class="f-input" id="f-addr2" placeholder="상세주소 입력" value=""/>
+                            </fieldset>
+                        </form>
+                    </section>
+
+                    <!-- 회사정보 이력 -->
+                    <section class="input-section">
+                        <h4 class="input-section__title"><b>회사정보 이력</b> (필수)</h4>
+                        <form class="form">
+                            <fieldset>
+                                <label class="f-label" for="f-field">분야선택</label>
+                                <select name="myfield" class="f-select" id="f-field">
+                                    <option value="채널분야">채널분야</option>
+                                </select>
+                            </fieldset>
+                            <fieldset>
+                                <label class="f-label" for="f-bizName">상호명</label>
+                                <input type="text" name="bizName" class="f-input" id="f-bizName" placeholder="상호명 입력" value=""/>
+                            </fieldset>
+                            <fieldset>
+                                <label class="f-label" for="f-bizNum">사업자등록번호</label>
+                                <input type="text" name="bizNum" class="f-input" id="f-bizNum" placeholder="사업자등록번호 입력" value=""/>
+                            </fieldset>
+                            <fieldset>
+                                <label class="f-label" for="f-bizAddr">주소</label>
+                                <input type="text" name="bizAddr" class="f-input" id="f-bizAddr" placeholder="주소 입력" value=""/>
+                                <label class="f-label" for="f-bizAddr2" hidden>상세주소</label>
+                                <input type="text" name="bizAddr2" class="f-input" id="f-bizAddr2" placeholder="상세주소 입력" value=""/>
+                            </fieldset>
+                            <fieldset>
+                                <label class="f-label">사업자등록증 첨부</label>
+                                <input type="file" name="bizLicense" class="f-file" id="f-bizLicense" hidden/>
+                                
+                                <div class="input-wrap grid v-center">
+                                    <input type="text" name="bizLicenseName" class="f-input" placeholder="사업자등록증 첨부" value="" readonly/>
+                                    <label class="btn" for="f-bizLicense">첨부</label>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </section>
+
+                    <!-- 기타 정보 -->
+                    <section class="input-section">
+                        <h4 class="input-section__title"><b>기타 정보</b></h4>
+                        <form class="form">
+                            <fieldset>
+                                <label class="f-label">사업자등록증 첨부</label>
+                                <input type="file" name="Corporate registration copy" class="f-file" id="f-corpRegCopy" hidden/>
+                                
+                                <div class="input-wrap grid v-center">
+                                    <input type="text" name="corpRegCopyName" class="f-input" placeholder="법인등기부등본 첨부" value="" readonly/>
+                                    <label class="btn" for="f-corpRegCopy">첨부</label>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </section>
+
+                    <!-- 유료회원 현장 관리 수 선택 -->
+                    <section class="input-section">
+                        <h4 class="input-section__title"><b>유료회원 현장 관리 수 선택</b></h4>
+                        <form class="form">
+                            <fieldset>
+                                <label class="f-label" for="f-siteNum" hidden>현장 관리 수</label>
+                                <select name="NumerOfSites" class="f-select" id="f-siteNum">
+                                    <option value="1개 현장">1개 현장</option>
+                                </select>
+                            </fieldset>
+                            <fieldset>
+                                <div class="radio-wrap">
+                                    <input type="radio" class="f-radio" name="paymentType" id="payPerYear" hidden/>
+                                    <label class="f-radio__label grid v-center" for="payPerYear">
+                                        <i class="f-radio__faux"></i>
+                                        연 결제 (1,500,000/vat 별도)
+                                    </label>
+                                </div>
+                                <div class="radio-wrap">
+                                    <input type="radio" class="f-radio" name="paymentType" id="payPerMonth" hidden/>
+                                    <label class="f-radio__label grid v-center" for="payPerMonth">
+                                        <i class="f-radio__faux"></i>
+                                        월 결제 (150,000/vat 별도)
+                                    </label>
+                                </div>
+                                <div class="pay-info">
+                                    <p>회비 납부 안내 (은행, 계좌번호, 구좌수)</p>
+                                    <ul class="pay-info__list">
+                                        <li>- 1현장 등록시 등록비 : 월 150,000원 / 연 1,500,000원 부가세 별도</li>
+                                        <li>- 추가 현장 선택 등록비 추가 비용 동일</li>
+                                    </ul>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </section>
+
+                    <div class="button-wrap grid h-center">
+                        <button class="btn cancel">취소</button>
+                        <button class="btn active">가입하기</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 푸터 -->
+            <footer class="footer">
+                <div class="layout p_none">
+                    <ul class="ft-list grid">
+                        <li>
+                            <a href="#">이용약관</a>
+                        </li>
+                        <li>
+                            <a href="#">개인정보처리방침</a>
+                        </li>
+                        <li>
+                            <a href="#">고객센터</a>
+                        </li>
+                    </ul>
+
+                    <ul class="ft-list grid">
+                        <li>부산광역시 해운대구 센텀중앙로 97 리홈(주)</li>
+                        <li>고객센터 1644-7115</li>
+                        <li>cs@rehomeapp.com</li>
+                    </ul>
+                    <ul class="ft-list grid">
+                        <li>Copyright ⓒ RealHome All rights reserved.</li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
