@@ -440,7 +440,7 @@ html, body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100%;
+  min-height: 100%;
 }
 
 .wrap.grey {
@@ -555,6 +555,39 @@ html, body {
   background-color: #e39e03;
 }
 
+.add-btn {
+  width: 5rem;
+  height: 5rem;
+  background-color: #DD0011;
+  border-radius: 50%;
+  -webkit-box-shadow: 3px 3px 10px rgba(181, 30, 36, 0.24);
+          box-shadow: 3px 3px 10px rgba(181, 30, 36, 0.24);
+  border: 0;
+  background-size: 1.46875rem;
+  background-image: url("/images/ico-add_wh.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  position: fixed;
+  bottom: 3.75rem;
+  right: 10%;
+  z-index: 10;
+}
+
+.list-add__btn {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  border: 2px solid #E3E3E3;
+  background-size: 1.75rem;
+  background-image: url("/images/ico-add.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5.625rem;
+}
+
 .form {
   border: 0;
   padding: 0 0.875rem;
@@ -584,11 +617,19 @@ html, body {
 }
 
 .form fieldset .f-label {
-  width: 100%;
-  display: block;
+  display: inline-block;
   font-size: 1.125rem;
   color: black;
   margin-bottom: 1.25rem;
+}
+
+.form fieldset .f-label.required::after {
+  content: '*';
+  color: #DD0011;
+  display: inline-block;
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-left: 0.25rem;
 }
 
 .form fieldset .f-radio:checked + .f-radio__label .f-radio__faux {
@@ -856,6 +897,24 @@ html, body {
   color: #C3C3C3;
   font-size: 1.125rem;
   font-weight: normal;
+}
+
+.like-check__wrap .like-check__label {
+  cursor: pointer;
+  color: #E3E3E3;
+  font-size: 1.125rem;
+}
+
+.like-check__wrap .like-check__label > svg {
+  margin-right: 0.5rem;
+}
+
+.like-check__wrap .like-check:checked + .like-check__label {
+  color: #DD0011;
+}
+
+.like-check__wrap .like-check:checked + .like-check__label > svg > path {
+  fill: #DD0011;
 }
 
 .layout {
@@ -1270,8 +1329,13 @@ html, body {
   margin: 0 0.75rem;
 }
 
+.layout-ft + .footer {
+  margin-top: 0;
+}
+
 .layout-ft {
   background-color: white;
+  margin-top: auto;
 }
 
 @media all and (max-width: 1254px) {
@@ -2618,4 +2682,242 @@ html, body {
   font-size: 1rem;
   color: #FFFFFF;
   background-color: #DD0011;
+}
+
+.design-layout .container {
+  padding: 3.75rem 0 12.5rem 0;
+}
+
+.design-search__wrap {
+  margin-bottom: 3.75rem;
+  text-align: center;
+}
+
+.design-search__wrap .search {
+  position: relative;
+  display: inline-block;
+}
+
+.design-search__wrap .search-input {
+  border: 1px solid #EBEBEB;
+  width: 25rem;
+  height: 2.5rem;
+  padding: 0 1rem;
+  padding-right: 2.5rem;
+  font-size: 0.875rem;
+  color: #767676;
+  font-weight: normal;
+}
+
+.design-search__wrap .search-btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: url("/images/ico-search.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 0.735rem;
+  z-index: 1;
+}
+
+.design-list__section .design-list > li {
+  width: 50%;
+  margin-bottom: 1rem;
+}
+
+.design-list__section .design-list > li:nth-of-type(2n) {
+  padding-left: 0.5rem;
+}
+
+.design-list__section .design-list > li:nth-of-type(2n+1) {
+  padding-right: 0.5rem;
+}
+
+.design-list__section .design-list > li .design-list__box {
+  background-color: white;
+  padding: 1.5625rem;
+  border-radius: 0.25rem;
+  position: relative;
+}
+
+.design-list__section .design-list > li .design-list__box > a {
+  display: block;
+}
+
+.design-list__section .design-list > li .design-list__info {
+  margin: 0;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+.design-list__section .design-list > li .design-list__info > dt {
+  width: 25%;
+  margin-bottom: 0.5rem;
+  color: #8E8E8E;
+  font-weight: normal;
+}
+
+.design-list__section .design-list > li .design-list__info > dd {
+  width: 75%;
+  margin: 0;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.design-list__section .design-list > li .date {
+  margin-left: 25%;
+}
+
+.design-list__section .design-list > li .like-check__wrap {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 3.5625rem;
+}
+
+.design-detail__section {
+  background-color: white;
+  border-top: 3px solid #DD0011;
+}
+
+.design-detail__section .design-detail {
+  width: 52rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 4.8125rem;
+  padding-bottom: 10.625rem;
+}
+
+.design-detail__section .design-detail .detail-hd {
+  font-size: 2rem;
+  font-weight: 500;
+  padding-bottom: 3.75rem;
+  text-align: center;
+  border-bottom: 1.5px solid #EBEBEB;
+  line-height: 1;
+}
+
+.design-detail__section .design-detail .detail-info__wrap {
+  padding: 2rem 5rem;
+  padding-right: 1.625rem;
+  border-bottom: 1.5px solid #EBEBEB;
+  margin-bottom: 5.75rem;
+}
+
+.design-detail__section .design-detail .detail-info__wrap .detail-info {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  margin: 0;
+}
+
+.design-detail__section .design-detail .detail-info__wrap .detail-info > dt {
+  width: 15%;
+  font-size: 1.125rem;
+  color: #8E8E8E;
+  font-weight: normal;
+}
+
+.design-detail__section .design-detail .detail-info__wrap .detail-info > dt:not(:last-of-type) {
+  margin-bottom: 0.5rem;
+}
+
+.design-detail__section .design-detail .detail-info__wrap .detail-info > dd {
+  width: 85%;
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: normal;
+  padding-right: 1rem;
+}
+
+.design-detail__section .design-detail .detail-info__wrap .btn {
+  margin-left: auto;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0 3.125rem;
+  height: 3.5rem;
+  -webkit-box-shadow: 5px 5px 10px rgba(255, 0, 0, 0.16);
+          box-shadow: 5px 5px 10px rgba(255, 0, 0, 0.16);
+}
+
+.design-detail__section .design-detail .draft-list > li {
+  width: 50%;
+  margin-bottom: 1rem;
+}
+
+.design-detail__section .design-detail .draft-list > li:nth-of-type(2n) {
+  padding-left: 0.5rem;
+}
+
+.design-detail__section .design-detail .draft-list > li:nth-of-type(2n+1) {
+  padding-right: 0.5rem;
+}
+
+.design-detail__section .design-detail .draft-list .draft-title {
+  margin: 0;
+  margin-bottom: 1.625rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.design-detail__section .design-detail .draft-list .draft-title .like-check__wrap {
+  margin-left: auto;
+  margin-right: 2rem;
+}
+
+.design-detail__section .design-detail .draft-list .draft-title .like-check__wrap .like-check__label {
+  font-size: 0.875rem;
+  font-weight: normal;
+}
+
+.design-detail__section .design-detail .draft-list .draft-title .like-check__wrap .like-check__label > svg {
+  width: 1rem;
+  height: auto;
+}
+
+.design-detail__section .design-detail .draft-list .draft-img {
+  width: 100%;
+  height: 12.5rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.design-register__tab {
+  padding: 0 16rem;
+}
+
+.design-register__tab [role="tab"] {
+  width: 25%;
+  padding-bottom: 0.875rem;
+}
+
+.design-register__tab [role="tab"] > span {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.design-register__tab [role="tab"][aria-selected="true"] {
+  border-bottom: 3px solid #DD0011;
+}
+
+.design-register__tab [role="tab"][aria-selected="true"] > span {
+  color: #DD0011;
+}
+
+.design-register__tabpanel {
+  background-color: white;
+  padding: 5.5rem 0 5.625rem;
+}
+
+.design-register__tabpanel .form {
+  width: 46.5625rem;
+  margin-left: auto;
+  margin-right: auto;
 }

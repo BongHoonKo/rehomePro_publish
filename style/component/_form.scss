@@ -18,11 +18,20 @@
             }
         }
         .f-label {
-            width: 100%;
-            display: block;
+            display: inline-block;
             font-size: 1.125rem;
             color: black;
             margin-bottom: 1.25rem;
+            &.required {
+                &::after {
+                    content: '*';
+                    color: $main-color;
+                    display: inline-block;
+                    font-size: 1.125rem;
+                    font-weight: 500;
+                    margin-left: 0.25rem;
+                }
+            }
         }
         .f-radio {
             &:checked {
@@ -239,6 +248,27 @@
             color: #C3C3C3;
             font-size: 1.125rem;
             font-weight: normal;
+        }
+    }
+}
+
+.like-check__wrap {
+    .like-check__label {
+        cursor: pointer;
+        color: #E3E3E3;
+        font-size: 1.125rem;
+        & > svg {
+            margin-right: 0.5rem;
+        }
+    }
+    .like-check {
+        &:checked {
+            & + .like-check__label {
+                color: $main-color;
+                & > svg > path {
+                    fill: $main-color;
+                }
+            }
         }
     }
 }

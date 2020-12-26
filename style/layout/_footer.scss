@@ -33,8 +33,12 @@
     }
 }
 
+.layout-ft + .footer {
+    margin-top: 0;
+}
 .layout-ft {
     background-color: white;
+    margin-top: auto;
     @include respond-to(max-width, con) {
         height: 6.5rem;
         display: flex;

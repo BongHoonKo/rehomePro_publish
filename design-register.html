@@ -109,89 +109,58 @@
                 <h2 class="header-title">디자인 관리</h2>
             </header>
 
-            <!-- 디자인 관리(list) -->
+            <!-- 디자인 관리(등록) -->
             <div class="layout design-layout">
                 <div class="container">
-                    <div class="design-search__wrap">
-                        <div class="search">
-                            <input type="text" class="search-input" name="design-search" placeholder="검색어를 입력해주세요"/>
-                        <button class="search-btn" type="button" title="검색"/>
-                        </div>
+                    <div role="tablist" aria-label="Sample Tabs" class="design-register__tab grid">
+                        <button role="tab" aria-selected="true" aria-controls="panel-1" id="tab-1" tabindex="0">
+                              <span>홍보물 등록하기</span>
+                        </button>
                     </div>
-                    <section class="design-list__section">
-                        <ul class="design-list grid grid-wrap">
-                            <li>
-                                <div class="design-list__box">
-                                    <a href="#">
-                                        <dl class="design-list__info grid grid-wrap">
-                                            <dt>현장명</dt>
-                                            <dd>광명 푸르지오 센트베르 분양영업</dd>
-        
-                                            <dt>홍보물 종류</dt>
-                                            <dd>물티슈</dd>
-                                        </dl>
-                                    </a>
-                                    <p class="date">2020.03.24</p>
-                                    <div class="like-check__wrap">
-                                        <input type="checkbox" class="like-check" id="design-like-1" hidden/>
-                                        <label class="like-check__label grid v-center" for="design-like-1" title="좋아요">
-                                            <svg id="like-svg" data-name="like" xmlns="http://www.w3.org/2000/svg" width="19.451" height="18.065" viewBox="0 0 19.451 18.065">
-                                                <path id="합치기_3" data-name="합치기 3" d="M-15268.519-512.337l-7.558-8.267a5.969,5.969,0,0,1,0-7.864,4.792,4.792,0,0,1,7.2,0l1.051,1.146,1.051-1.146a4.791,4.791,0,0,1,7.2,0,5.969,5.969,0,0,1,0,7.864l-7.558,8.267a.912.912,0,0,1-.682.307h-.021A.924.924,0,0,1-15268.519-512.337Z" transform="translate(15277.555 530.096)" fill="#e3e3e3"/>
-                                            </svg>
-                                            0                                                                                                                           
-                                        </label>
-                                    </div>
-                                </div>
-                            </li>
 
-                            <li>
-                                <div class="design-list__box">
-                                    <dl class="design-list__info grid grid-wrap">
-                                        <dt>현장명</dt>
-                                        <dd>광명 푸르지오 센트베르 분양영업</dd>
-    
-                                        <dt>홍보물 종류</dt>
-                                        <dd>물티슈</dd>
-                                    </dl>
-                                    <p class="date">2020.03.24</p>
-                                    <div class="like-check__wrap">
-                                        <input type="checkbox" class="like-check" id="design-like-2" hidden/>
-                                        <label class="like-check__label grid v-center" for="design-like-2" title="좋아요">
-                                            <svg id="like-svg" data-name="like" xmlns="http://www.w3.org/2000/svg" width="19.451" height="18.065" viewBox="0 0 19.451 18.065">
-                                                <path id="합치기_3" data-name="합치기 3" d="M-15268.519-512.337l-7.558-8.267a5.969,5.969,0,0,1,0-7.864,4.792,4.792,0,0,1,7.2,0l1.051,1.146,1.051-1.146a4.791,4.791,0,0,1,7.2,0,5.969,5.969,0,0,1,0,7.864l-7.558,8.267a.912.912,0,0,1-.682.307h-.021A.924.924,0,0,1-15268.519-512.337Z" transform="translate(15277.555 530.096)" fill="#e3e3e3"/>
-                                            </svg>
-                                            0                                                                                                                           
-                                        </label>
-                                    </div>
-                                </div>
-                            </li>
+                    <!-- 디자인 등록 판넬 -->
+                    <div id="panel-1" role="tabpanel" tabindex="0" class="design-register__tabpanel" aria-labelledby="tab-1">
+                        <form class="form">
+                            <fieldset>
+                                <label class="f-label required" for="sitename">현장명</label>
+                                <input type="text" name="site-name" class="f-input" id="sitename" placeholder="현장명 입력" required/>
+                            </fieldset>
 
-                            <li>
-                                <div class="design-list__box">
-                                    <dl class="design-list__info grid grid-wrap">
-                                        <dt>현장명</dt>
-                                        <dd>광명 푸르지오 센트베르 분양영업</dd>
-    
-                                        <dt>홍보물 종류</dt>
-                                        <dd>물티슈</dd>
-                                    </dl>
-                                    <p class="date">2020.03.24</p>
-                                    <div class="like-check__wrap">
-                                        <input type="checkbox" class="like-check" id="design-like-3" hidden/>
-                                        <label class="like-check__label grid v-center" for="design-like-3" title="좋아요">
-                                            <svg id="like-svg" data-name="like" xmlns="http://www.w3.org/2000/svg" width="19.451" height="18.065" viewBox="0 0 19.451 18.065">
-                                                <path id="합치기_3" data-name="합치기 3" d="M-15268.519-512.337l-7.558-8.267a5.969,5.969,0,0,1,0-7.864,4.792,4.792,0,0,1,7.2,0l1.051,1.146,1.051-1.146a4.791,4.791,0,0,1,7.2,0,5.969,5.969,0,0,1,0,7.864l-7.558,8.267a.912.912,0,0,1-.682.307h-.021A.924.924,0,0,1-15268.519-512.337Z" transform="translate(15277.555 530.096)" fill="#e3e3e3"/>
-                                            </svg>
-                                            0                                                                                                                           
-                                        </label>
-                                    </div>
+                            <fieldset>
+                                <label class="f-label" for="f-type">홍보물 종류</label>
+                                <select name="promotionType" class="f-select" id="f-type">
+                                    <option value="물티슈">물티슈</option>
+                                </select>
+                            </fieldset>
+
+                            <fieldset>
+                                <label class="f-label">디자인 시안</label>
+                                <input type="file" name="designDraft" class="f-file" id="f-designDraft" hidden/>
+                                
+                                <div class="input-wrap grid v-center">
+                                    <input type="text" name="designDraftName" class="f-input" placeholder="디자인 시안 첨부" value="" readonly/>
+                                    <label class="btn" for="f-designDraft">첨부</label>
                                 </div>
-                            </li>
-                        </ul>
-                    </section>
-                    <button class="add-btn" title="등록하기"></button>
+                            </fieldset>
+                            <button class="list-add__btn" title="추가하기"></button>
+                        </form>
+                    </div>
                 </div>
             </div>
+
+            <!-- 수정 푸터 -->
+            <section class="layout-ft">
+                <div class="layout p_none">
+                    <div class="grid v-center">
+                        <button class="ft-btn">목록</button>
+
+                        <div class="btn-wrap grid">
+                            <button class="btn cancel">삭제</button>
+                            <button class="btn main">수정</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <!-- 푸터 -->
             <footer class="footer">
