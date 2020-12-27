@@ -6,32 +6,6 @@
 .design-search__wrap {
     margin-bottom: 3.75rem;
     text-align: center;
-    .search {
-        position: relative;
-        display: inline-block;
-    }
-    .search-input {
-        border: 1px solid #EBEBEB;
-        width: 25rem;
-        height: 2.5rem;
-        padding: 0 1rem;
-        padding-right: 2.5rem;
-        font-size: 0.875rem;
-        color: #767676;
-        font-weight: normal;
-    }
-    .search-btn {
-        width: 2.5rem;
-        height: 2.5rem;
-        position: absolute;
-        top: 0;
-        right: 0;
-        background-image: url('/images/ico-search.svg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 0.735rem;
-        z-index: 1;
-    }
 }
 .design-list__section {
     .design-list {

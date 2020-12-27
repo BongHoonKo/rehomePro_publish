@@ -1,0 +1,98 @@
+.member-layout {
+    .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .r-tabpanel {
+        padding: 6.25rem 9rem;
+    }
+    .search-select {
+        margin-right: 0.625rem;
+    }
+    .member-search__wrap {
+        margin-bottom: 3.125rem;
+    }
+    .member-table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 100%;
+        font-size: 0.875rem;
+        font-weight: normal;
+        margin-bottom: 6.25rem;
+        thead {
+            th {
+                text-align: left;
+                background-color: rgba(96,96,96,0.5);
+                color: white;
+                font-size: 0.875rem;
+                font-weight: normal;
+                padding: 0.625rem 0.5rem;
+                &:first-child {
+                    padding-left: 4.375rem;
+                }
+            }
+        }
+        tbody {
+            tr:nth-of-type(2n+1) {
+                & > td {
+                    background-color: #EFEFEF;
+                }
+            }
+            td {
+                padding: 1.4375rem 0.5rem;
+                &:first-child {
+                    padding-left: 4.375rem;
+                }
+            }
+        }
+    }
+}
+.member-info__section + .member-info__section {
+    margin-top: 3.75rem;
+}
+.member-info__section {
+    .section-title {
+        font-size: 1.25rem;
+        padding: 0;
+        padding-bottom: 1.125rem;
+        margin-bottom: 2.5rem;
+    }
+    .section-content {
+        .member-img {
+            padding: 1.375rem 1.4375rem;
+            border: 1px solid #D6D9E3;
+            border-radius: 3px;
+            text-align: center;
+            font-size: 1.25rem;
+            font-weight: normal;
+            margin-left: 2.5rem;
+            margin-right: 4.78125rem;
+            .profile-img {
+                margin-bottom: 0.875rem;
+            }
+        }
+        .info-list {
+            flex: 1 1 auto;
+            padding-right: 1.625rem;
+            & > li {
+                padding: 1rem 0;
+                font-size: 1rem;
+                font-weight: normal;
+                &:not(:last-of-type) {
+                    border-bottom: 1px solid #EBEBEB;
+                    & > svg {
+                        margin-right: 0.6rem;
+                    }
+                }
+                & > svg {
+                    margin-right: 0.8rem;
+                }
+                & > span {
+                    display: inline-block;
+                    width: 5.875rem;
+                    color: #919191;
+                }
+            }
+        }
+    }
+}

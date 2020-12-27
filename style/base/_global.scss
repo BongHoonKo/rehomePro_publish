@@ -35,3 +35,71 @@
         text-align: center;
     }
 }
+
+.r-tab {
+    [role="tab"] {
+        flex: 1 1 auto;
+        padding: 1.125rem 0.5rem;
+        font-size: 1.125rem;
+        font-weight: normal;
+        color: #767676;
+        background-color: white;
+        border-bottom: 3px solid $main-color;
+        &[aria-selected="true"] {
+            background-color: $main-color;
+            color: white;
+        }
+    }
+}
+.r-tabpanel {
+    background-color: white;
+}
+.profile-img {
+    width: 6.25rem;
+    height: 6.25rem;
+    border-radius: 50%;
+    background-image: url('../images/default-person.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.info-card {
+    width: 50%;
+    margin-bottom: 0.5rem;
+    &.lined {
+        .card-list {
+            border-left: 7px solid #D9D9D9;
+        }
+    }
+    &:nth-of-type(2n) {
+        padding-left: 0.5rem;
+    }
+    &:nth-of-type(2n+1) {
+        padding-right: 0.5rem;
+    }
+    .card-list {
+        border: 1px solid #D6D9E3;
+        border-radius: 3px;
+        padding: 1.25rem 1.5rem;
+        & > li {
+            display: flex;
+            margin-bottom: 0.625rem;
+            & > span {
+                color: #8E8E8E;
+                font-size: 1rem;
+                font-weight: normal;
+                display: inline-block;
+                width: 6.5625rem;
+                flex: 0 0 auto;
+            }
+            &:first-of-type {
+                font-weight: 500;
+            }
+            &:last-of-type {
+                color: #8E8E8E;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
