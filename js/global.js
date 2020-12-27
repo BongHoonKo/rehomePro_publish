@@ -1,20 +1,21 @@
 'use strict';
 
-window.addEventListener("DOMContentLoaded", () => {
-    const tabs = document.querySelectorAll('[role="tab"]');
-    const tabList = document.querySelector('[role="tablist"]');
+window.addEventListener("DOMContentLoaded", function() {
+  var tabs = document.querySelectorAll('[role="tab"]');
+  var tabList = document.querySelector('[role="tablist"]');
 
     // 탭
     if(tabs) {
-      tabs.forEach(tab => {
+      tabs = [].slice.call(tabs);
+      tabs.forEach(function(tab) {
         tab.addEventListener("click", changeTabs);
       });
     }
   
-    let tabFocus = 0;
+    var tabFocus = 0;
     
     if(tabList) {
-      tabList.addEventListener("keydown", e => {
+      tabList.addEventListener("keydown", function(e) {
         // Move right
         if (e.keyCode === 39 || e.keyCode === 37) {
           tabs[tabFocus].setAttribute("tabindex", -1);
@@ -38,9 +39,10 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 
     // 아코디언
-    let accrBtns = document.querySelectorAll('.accordian .accordian-controls');
+    var accrBtns = document.querySelectorAll('.accordian .accordian-controls');
     if(accrBtns) {
-      accrBtns.forEach(accr => {
+      accrBtns = [].slice.call(accrBtns);
+      accrBtns.forEach(function(accr) {
         accr.addEventListener("click", handleAccordian);
       });
     }
@@ -49,61 +51,61 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 
   function handleAccordian(e) {
-    const target = e.currentTarget;
-    const parent = target.parentNode;
-    const grandparent = parent.parentNode;
+    var target = e.currentTarget;
+    var parent = target.parentNode;
+    var grandparent = parent.parentNode;
 
-    parent
-      .querySelectorAll('[aria-expanded="true"]')
-      .forEach(t => t.setAttribute("aria-expanded", false));
+    var parentExpanded = parent.querySelectorAll('[aria-expanded="true"]');
+    parentExpanded = [].slice.call(parentExpanded);
+    parentExpanded.forEach(function(t) {t.setAttribute("aria-expanded", false)});
 
     target.setAttribute("aria-expanded", true);
 
-    grandparent
-      .querySelectorAll('.accordian-content')
-      .forEach(p => p.setAttribute("hidden", true));
+    var grandExpanded = grandparent.querySelectorAll('.accordian-content');
+    grandExpanded = [].slice.call(grandExpanded);
+    grandExpanded.forEach(function(p) {p.setAttribute("hidden", true);});
   
     grandparent.parentNode
-      .querySelector(`#${target.getAttribute("aria-controls")}`)
+      .querySelector("#" + target.getAttribute("aria-controls"))
       .removeAttribute("hidden");
   }
   
   function changeTabs(e) {
-    const target = e.currentTarget;
-    const parent = target.parentNode;
-    const grandparent = parent.parentNode;
+    var target = e.currentTarget;
+    var parent = target.parentNode;
+    var grandparent = parent.parentNode;
   
-    parent
-      .querySelectorAll('[aria-selected="true"]')
-      .forEach(t => t.setAttribute("aria-selected", false));
+    var parentExpanded = parent.querySelectorAll('[aria-selected="true"]');
+    parentExpanded = [].slice.call(parentExpanded);
+    parentExpanded.forEach(function(t) {t.setAttribute("aria-selected", false);});
   
     target.setAttribute("aria-selected", true);
   
-    grandparent
-      .querySelectorAll('[role="tabpanel"]')
-      .forEach(p => p.setAttribute("hidden", true));
+    var grandExpanded = grandparent.querySelectorAll('[role="tabpanel"]');
+    grandExpanded = [].slice.call(grandExpanded);
+    grandExpanded.forEach(function(p) {p.setAttribute("hidden", true);});
   
     console.log(target.getAttribute("aria-controls"));
     grandparent.parentNode
-      .querySelector(`#${target.getAttribute("aria-controls")}`)
+      .querySelector("#" + target.getAttribute("aria-controls"))
       .removeAttribute("hidden");
   }
 
 
-  let closeModal = function(e) {
+  var closeModal = function(e) {
     e.currentTarget.closest('.modal').classList.remove('active');
   }
 
 /* 퍼블리싱 페이지 보기 ( 아래로 추후 삭제 ) */
 function insertPageList() {
-  let list = ['terms','c-channel-list','member-list','index','home','login','register','faq','c-site-list','channel-list','channel-detail','cs','my-info','notice-list','save-list','site-detail','site-list','welcome'];
-  let html = '';
-  list.forEach(item => {
+  var list = ['design-detail','design-list','design-register','index','login','member-management','mypage','phone-verify','register-complete','register-info'];
+  var html = '';
+  list.forEach(function(item) {
       html += '<li><a href="/'+ item +'.html">'+ item +'</a></li>'
   });
-  //document.getElementsByTagName('body')[0].insertAdjacentHTML('afterbegin','<ul class="view-site">'+ html +'</ul>');
+  document.getElementsByTagName('body')[0].insertAdjacentHTML('afterbegin','<ul class="view-site">'+ html +'</ul>');
 
-  //document.getElementsByTagName('body')[0].insertAdjacentHTML('afterbegin','<button class="test-btn" onclick="showSiteList(this);"></button>');
+  document.getElementsByTagName('body')[0].insertAdjacentHTML('afterbegin','<button class="test-btn" onclick="showSiteList(this);"></button>');
 }
 
 function showSiteList(e) {
@@ -118,10 +120,10 @@ function showSiteList(e) {
 }
 
 function showSideMenu() {
-  let sideMenu = document.querySelector('.side-menu');
+  var sideMenu = document.querySelector('.side-menu');
   sideMenu.classList.add('active');
 }
 function removeSideMenu() {
-  let sideMenu = document.querySelector('.side-menu');
+  var sideMenu = document.querySelector('.side-menu');
   sideMenu.classList.remove('active');
 }

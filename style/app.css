@@ -562,6 +562,38 @@ html, body {
   margin-bottom: 0;
 }
 
+.view-site {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: white;
+  z-index: 9990;
+  display: none;
+}
+
+.view-site.active {
+  display: block;
+}
+
+.view-site > li {
+  color: #333;
+  text-align: center;
+  padding: 1rem;
+}
+
+.test-btn {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 9999;
+  background-color: #333;
+  width: 2rem;
+  height: 2rem;
+}
+
 .btn {
   color: white;
   font-size: 1.25rem;
@@ -3089,6 +3121,36 @@ html, body {
   margin-bottom: 2.5rem;
 }
 
+.member-info__section .section-title .cancel-btn {
+  font-size: 0.75rem;
+  color: #DD0011;
+  border: 1px solid #DD0011;
+  border-radius: 300rem;
+  padding: 0 0.625rem;
+  height: 1.375rem;
+  margin-left: 0.875rem;
+  -webkit-transform: translateY(-0.125rem);
+          transform: translateY(-0.125rem);
+}
+
+.member-info__section .section-content.last .info-list {
+  margin-bottom: 2.5rem;
+}
+
+.member-info__section .section-content.last .info-list > li {
+  padding: 0;
+  font-weight: 500;
+}
+
+.member-info__section .section-content.last .info-list > li > span {
+  font-weight: normal;
+}
+
+.member-info__section .section-content.last .info-list > li:not(:last-of-type) {
+  border: 0;
+  padding-bottom: 0.375rem;
+}
+
 .member-info__section .section-content .member-img {
   padding: 1.375rem 1.4375rem;
   border: 1px solid #D6D9E3;
@@ -3133,4 +3195,121 @@ html, body {
   display: inline-block;
   width: 5.875rem;
   color: #919191;
+}
+
+.member-info__section .section-content .select-box {
+  padding: 2.5rem 5.625rem;
+  border: 1px solid #D9D9D9;
+  border-radius: 3px;
+  margin-bottom: 4.375rem;
+}
+
+.member-info__section .section-content .select-box fieldset .f-label {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.member-info__section .section-content .select-box fieldset .f-select {
+  width: 78%;
+  font-size: 1rem;
+  margin-left: auto;
+  padding-top: 0.8125rem;
+  padding-bottom: 0.8125rem;
+}
+
+.member-info__section .section-content .select-box .btn-wrap {
+  padding-left: 22%;
+  margin-top: 2.5rem;
+}
+
+.member-info__section .section-content .select-box .btn-wrap .btn {
+  min-width: 9.75rem;
+  height: 2.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: white;
+}
+
+.member-info__section .section-content .select-box .btn-wrap .btn + .btn {
+  margin-left: 0.5rem;
+}
+
+.commuting-wrap + .commuting-wrap {
+  margin-top: 3.125rem;
+}
+
+.commuting-wrap .commuting-hd {
+  background-color: rgba(96, 96, 96, 0.5);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: white;
+  padding: 0.625rem 4.375rem;
+}
+
+.commuting-wrap .commuting-list > li {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.4375rem 4.375rem;
+}
+
+.commuting-wrap .commuting-list > li:nth-of-type(2n+1) {
+  background-color: #EFEFEF;
+}
+
+.commuting-wrap .commuting-list > li .commuting-name {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.commuting-wrap .commuting-list > li .commuting-times {
+  color: #8E8E8E;
+  font-size: 0.875rem;
+  font-weight: normal;
+}
+
+.commuting-wrap .commuting-list > li .commuting-times > span {
+  display: inline-block;
+  width: 5.125rem;
+  text-align: center;
+}
+
+.commuting-wrap .commuting-list > li .commuting-times > span:first-of-type {
+  margin-right: 3.125rem;
+}
+
+.commuting-wrap .commuting-list > li .commuting-times > span:last-of-type {
+  margin-left: 3.125rem;
+}
+
+.commuting-wrap .commuting-list > li .commuting-times .commuting-btn {
+  font-size: 0.75rem;
+  color: white;
+  font-weight: 500;
+  height: 1.625rem;
+  width: 5.125rem;
+  background-color: #DD0011;
+  border-radius: 0.25rem;
+}
+
+.commuting-wrap .commuting-list > li .commuting-times .commuting-btn:first-of-type {
+  margin-right: 3.125rem;
+}
+
+.commuting-wrap .commuting-list > li .commuting-times .commuting-btn:last-of-type {
+  margin-left: 3.125rem;
+}
+
+.commuting-wrap .commuting-list > li .btn {
+  font-size: 0.75rem;
+  color: #DD0011;
+  font-weight: 500;
+  padding: 0 0.5625rem;
+  height: 1.5rem;
+  border: 1px solid #DD0011;
+}
+
+.commuting-wrap .commuting-list > li .btn:disabled {
+  color: #8E8E8E;
+  border-color: #8E8E8E;
 }

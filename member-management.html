@@ -263,6 +263,50 @@
                                 </div>
                             </section>
 
+                            <section class="member-info__section">
+                                <h4 class="section-title">현장 조직 배치<button class="cancel-btn">신청 취소</button></button></h4>
+                                <div class="section-content last">
+                                    <ul class="info-list">
+                                        <li>
+                                            <span>신청 현장명</span>
+                                            광명 푸르지오 센트베르 분양영업
+                                        </li>
+                                        <li>
+                                            <span>신청 직책</span>
+                                            본부장, 팀장, 팀원
+                                        </li>
+                                    </ul>
+
+                                    <div class="select-box form">
+                                        <fieldset class="grid v-center">
+                                            <label class="f-label" for="f-department">본부</label>
+                                            <select name="department" class="f-select" id="f-department">
+                                                <option value="1본부">1본부</option>
+                                            </select>
+                                        </fieldset>
+
+                                        <fieldset class="grid v-center">
+                                            <label class="f-label" for="f-team">팀</label>
+                                            <select name="team" class="f-select" id="f-team">
+                                                <option value="1팀">1팀</option>
+                                            </select>
+                                        </fieldset>
+
+                                        <fieldset class="grid v-center">
+                                            <label class="f-label" for="f-position">직책</label>
+                                            <select name="position" class="f-select" id="f-position">
+                                                <option value="본부장">본부장</option>
+                                            </select>
+                                        </fieldset>
+
+                                        <div class="btn-wrap grid">
+                                            <button type="button" class="btn cancel">취소</button>
+                                            <button type="button" class="btn main">승인</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
                             <div class="grid h-center">
                                 <button type="button" class="btn lined" title="출퇴근 현황 자세히 보기">출퇴근 현황 자세히 보기</button>
                             </div>
@@ -272,10 +316,88 @@
 
                     <!-- 출퇴근 관리 탭 -->
                     <div id="panel-2" role="tabpanel" tabindex="-1" class="r-tabpanel" aria-labelledby="tab-2" hidden>
-                        2
+                        <!-- 개인회원 관리 리스트 -->
+                        <div class="member-list__wrap">
+                            <div class="member-search__wrap grid h-center">
+                                <select class="search-select" name="search-select">
+                                    <option value="회원명">회원명</option>
+                                </select>
+                                <div class="search">
+                                    <input type="text" class="search-input" name="design-search" placeholder="검색어를 입력해주세요"/>
+                                    <button class="search-btn" type="button" title="검색"/>
+                                </div>
+                            </div>
+
+                            <section class="commuting-wrap">
+                                <h4 class="commuting-hd">03.23 (월)</h4>
+                                <ul class="commuting-list">
+                                    <li class="grid v-center">
+                                        <p class="commuting-name">이수근</p>
+                                        <div class="commuting-times">
+                                            <span>출근 09:45</span> - <span>퇴근 17:00</span>
+                                        </div>
+                                        <button type="button" class="btn" title="확인">확인</button>
+                                    </li>
+
+                                    <li class="grid v-center">
+                                        <p class="commuting-name">이수근</p>
+                                        <div class="commuting-times">
+                                            <button type="button" class="commuting-btn">출근 미체크</button> - <button type="button" class="commuting-btn">퇴근 미체크</button>
+                                        </div>
+                                        <button type="button" class="btn" title="확인" disabled>확인</button>
+                                    </li>
+
+                                    <li class="grid v-center">
+                                        <p class="commuting-name">이수근</p>
+                                        <div class="commuting-times">
+                                            <span>출근 09:45</span> - <span>퇴근 17:00</span>
+                                        </div>
+                                        <button type="button" class="btn" title="확인">확인</button>
+                                    </li>
+                                </ul>
+                            </section>
+
+                            <section class="commuting-wrap">
+                                <h4 class="commuting-hd">03.23 (월)</h4>
+                                <ul class="commuting-list">
+                                    <li class="grid v-center">
+                                        <p class="commuting-name">이수근</p>
+                                        <div class="commuting-times">
+                                            <span>출근 09:45</span> - <span>퇴근 17:00</span>
+                                        </div>
+                                        <button type="button" class="btn" title="확인">확인</button>
+                                    </li>
+
+                                    <li class="grid v-center">
+                                        <p class="commuting-name">이수근</p>
+                                        <div class="commuting-times">
+                                            <button type="button" class="commuting-btn">출근 미체크</button> - <button type="button" class="commuting-btn">퇴근 미체크</button>
+                                        </div>
+                                        <button type="button" class="btn" title="확인" disabled>확인</button>
+                                    </li>
+
+                                    <li class="grid v-center">
+                                        <p class="commuting-name">이수근</p>
+                                        <div class="commuting-times">
+                                            <span>출근 09:45</span> - <span>퇴근 17:00</span>
+                                        </div>
+                                        <button type="button" class="btn" title="확인">확인</button>
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <!-- 수정 푸터 -->
+            <section class="layout-ft">
+                <div class="layout p_none">
+                    <div class="grid v-center">
+                        <button class="ft-btn">목록</button>
+                    </div>
+                </div>
+            </section>
 
             <!-- 푸터 -->
             <footer class="footer">
