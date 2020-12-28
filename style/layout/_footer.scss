@@ -127,6 +127,34 @@
             }
         }
     }
+
+    .like-check__wrap {
+        margin-left: 0.5rem;
+        .like-check__label {
+            width: 3.5rem;
+            height: 3.5rem;
+            border: 2px solid #e3e3e3;
+            & > svg {
+                margin: 0;
+                width: 1.25rem;
+                height: auto;
+                path {
+                    fill: #E3E3E3;
+                }
+            }
+        }
+        .like-check {
+            &:checked {
+                & + .like-check__label {
+                    color: $main-color;
+                    border-color: $main-color;
+                    & > svg path {
+                        fill: $main-color;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .m-footer {
