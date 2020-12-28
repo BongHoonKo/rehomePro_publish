@@ -1,0 +1,33 @@
+.guide-layout {
+    .guide-section {
+        padding: 3.375rem 15.25rem 5.625rem;
+        border-top: 3px solid $main-color;
+        background-color: white;
+        .guide-title {
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+        .guide-list {
+            & > li {
+                padding: 0 2.375rem;
+                font-size: 1.125rem;
+                & > a {
+                    display: block;
+                    padding: 1.25rem 0;
+                    border-bottom: 1px solid #fafafa;
+                    background-image: url('/images/ico-right_grey.svg');
+                    background-position: right 2.1rem center;
+                    background-size: 0.46875rem;
+                    background-repeat: no-repeat;
+                }
+                &:last-of-type {
+                    & > a {
+                        border-color: #e3e3e3;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -10,7 +10,29 @@
         padding-bottom: 5rem;
     }
 }
-
+.container-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 3.75rem;
+    position: relative;
+    & > span {
+        border-bottom: 3px solid $main-color;
+        padding-bottom: 0.5rem;
+    }
+    .add-btn__static {
+        font-size: 1rem;
+        font-weight: normal;
+        color: $main-color;
+        border: 1px solid $main-color;
+        height: 2.1875rem;
+        padding: 0 1.5rem;
+        position: absolute;
+        right: 6.25rem;
+        top: 50%;
+        margin-top: -1.09375rem;
+    }
+}
 .ad-box {
     display: block;
     width: 25.5rem;

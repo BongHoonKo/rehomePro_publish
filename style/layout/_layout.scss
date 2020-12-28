@@ -18,7 +18,8 @@
     }
 
     .container {
-        padding: 4.375rem 25px 12.5rem 25px;
+        // padding: 4.375rem 25px 12.5rem 25px;
+        padding: 4.375rem 0 12.5rem 0;
         @include respond-to(max-width, con) {
             padding: 0.5rem 0;
         }
