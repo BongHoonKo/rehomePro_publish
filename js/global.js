@@ -98,7 +98,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
 /* 퍼블리싱 페이지 보기 ( 아래로 추후 삭제 ) */
 function insertPageList() {
-  var list = ['site-detail','guide','notice-list','design-detail','design-list','design-register','index','login','member-management','mypage','phone-verify','register-complete','register-info'];
+  var list = ['site-register','site-list','site-detail','guide','notice-list','design-detail','design-list','design-register','index','login','member-management','mypage','phone-verify','register-complete','register-info'];
   var html = '';
   list.forEach(function(item) {
       html += '<li><a href="/'+ item +'.html">'+ item +'</a></li>'

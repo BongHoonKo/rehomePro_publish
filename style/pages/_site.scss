@@ -14,6 +14,7 @@
     }
     .site-img {
         width: 25.625rem;
+        flex: 0 0 25.625rem;
         height: 15.625rem;
         background-size: cover;
         background-position: center;
@@ -50,6 +51,7 @@
     .site-info__list {
         & > li {
             font-size: 1.0625rem;
+            display: flex;
             & + li {
                 margin-top: 0.625rem;
             }
@@ -57,11 +59,14 @@
                 display: inline-block;
                 width: 6.25rem;
                 color: #8e8e8e;
+                flex: 0 0 auto;
             }
             .map-btn {
                 font-size: 1.0625rem;
                 color: $comp-color;
                 margin-left: 1rem;
+                flex: 0 0 auto;
+                margin-bottom: auto;
                 & > svg {
                     width: 0.8125rem;
                     height: auto;
@@ -120,4 +125,185 @@
     margin-bottom: 5.625rem;
     white-space: pre-line;
     font-size: 1.125rem;
+}
+
+.site-layout .site-list__container {
+    position: relative;
+    padding-top: 9.1875rem;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+}
+.site-search__wrap {
+    position: absolute;
+    top: -4.0625rem;
+    width: 100%;
+    height: 8.125rem;
+    left: 0;
+    .search {
+        background-color: white;
+        height: 100%;
+        box-shadow: -6px 0 20px rgba(0,0,0,0.09);
+        .input-wrap {
+            padding: 0 3.125rem;
+            .search-select {
+                margin-right: 0.25rem;
+            }
+            .search-input {
+                background-image: url('/images/ico-search.svg');
+                background-size: 0.75rem;
+                background-position: right 1rem center;
+                background-repeat: no-repeat;
+            }
+        }
+        .search-btn__full {
+            height: 100%;
+            font-size: 1rem;
+            font-weight: 500;
+            color: white;
+            background-color: $main-color;
+            padding: 0 2.625rem;
+        }
+    }
+}
+
+.site-list__section {
+    .site-list {
+        & > li {
+            padding: 0 0.5rem;
+            margin-bottom: 3.125rem;
+            & > a {
+                display: block;
+            }
+            .site-img {
+                height: 11.25rem;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                position: relative;
+                .progress-mark {
+                    background-color: $comp-color;
+                    color: white;
+                    border-radius: 0.25rem;
+                    font-size: 0.875rem;
+                    font-weight: normal;
+                    padding: 0.1875rem 0.75rem;
+                    position: absolute;
+                    top: 0.875rem;
+                    right: 0.875rem;
+                    box-shadow: 5px 5px 10px rgba(181, 30, 36, 0.16);
+                }
+                .position-mark {
+                    background-color: rgba(0,0,0,0.48);
+                    color: white;
+                    font-size: 0.75rem;
+                    font-weight: normal;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    display: block;
+                    & > span {
+                        padding: 0.25rem 1.125rem;
+                        display: inline-block;
+                    }
+                }
+            }
+            .site-txt {
+                padding: 1.25rem;
+                background-color: white;
+                .site-title {
+                    font-size: 1rem;
+                    font-weight: 500;
+                    margin-bottom: 0.125rem;
+                }
+                .site-location {
+                    color: #8E8E8E;
+                    font-size: 0.75rem;
+                    font-weight: 500;
+                    margin-bottom: 1rem;
+                }
+                .site-txt__ft {
+                    .site-type {
+                        background-color: #EAEAEA;
+                        border-radius: 3px;
+                        padding: 0.1875rem 0.75rem;
+                        font-size: 0.75rem;
+                        font-weight: 500;
+                        color: #606060;
+                    }
+                    .site-star__wrap {
+                        margin-left: auto;
+                        font-size: 0.8125rem;
+                        color: #404040;
+                        font-weight: 500;
+                        .site-star {
+                            position: relative;
+                            margin-right: 0.5rem;
+                            transform: translateY(1px);
+                            .star-active__wrap {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                overflow: hidden;
+                            }
+                        }
+                    }
+                }
+            }
+            .like-check__wrap {
+                position: absolute;
+                bottom: -1.0625rem;
+                right: 1.25rem;
+                .like-check__label {
+                    width: 2.125rem;
+                    height: 2.125rem;
+                    border-radius: 50%;
+                    background-color: white;
+                    box-shadow: 0 3px 10px rgba(181,181,181,0.25);
+                    & > svg {
+                        margin: 0;
+                        width: 1rem;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.site-register__tab {
+    padding: 0 16rem;
+    [role="tab"] {
+        width: 25%;
+        padding-bottom: 0.875rem;
+        & > span {
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+        &[aria-selected="true"] {
+            border-bottom: 3px solid $main-color;
+            & > span {
+                color: $main-color;
+            }
+        }
+    }
+}
+.site-register__tabpanel {
+    background-color: white;
+    padding: 5.5rem 0 5.625rem;
+    .site-register__section {
+        & + .site-register__section {
+            margin-top: 6.25rem;
+        }
+        width: 46.5625rem;
+        margin-left: auto;
+        margin-right: auto;
+        .section-title {
+            padding-left: 0;
+        }
+    }
+    .form {
+        width: 100%;
+        padding: 0;
+    }
 }

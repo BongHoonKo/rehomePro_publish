@@ -73,6 +73,7 @@
                 margin-bottom: 2.5rem;
                 & > li {
                     padding: 0;
+                    display: flex;
                     font-weight: 500;
                     & > span {
                         font-weight: normal;
@@ -117,6 +118,7 @@
                     display: inline-block;
                     width: 5.875rem;
                     color: #919191;
+                    flex: 0 0 auto;
                 }
             }
         }

@@ -106,44 +106,154 @@
                     </section>
                 </aside>
                 
-                <h2 class="header-title">디자인 관리</h2>
+                <h2 class="header-title">분양현장</h2>
             </header>
 
-            <!-- 디자인 관리(등록) -->
-            <div class="layout design-layout">
+            <!-- 분양현장(등록) -->
+            <div class="layout site-layout">
                 <div class="container">
-                    <div role="tablist" aria-label="홍보물 등록 탭리스트" class="design-register__tab grid">
+                    <div role="tablist" aria-label="현장등록 탭 리스트" class="site-register__tab grid">
                         <button role="tab" aria-selected="true" aria-controls="panel-1" id="tab-1" tabindex="0">
-                              <span>홍보물 등록하기</span>
+                              <span>현장등록하기</span>
                         </button>
                     </div>
 
-                    <!-- 디자인 등록 판넬 -->
-                    <div id="panel-1" role="tabpanel" tabindex="0" class="design-register__tabpanel" aria-labelledby="tab-1">
-                        <form class="form">
-                            <fieldset>
-                                <label class="f-label required" for="sitename">현장명</label>
-                                <input type="text" name="site-name" class="f-input" id="sitename" placeholder="현장명 입력" required/>
-                            </fieldset>
+                    <!-- 분양현장 등록 판넬 -->
+                    <div id="panel-1" role="tabpanel" tabindex="0" class="site-register__tabpanel" aria-labelledby="tab-1">
+                        <section class="site-register__section">
+                            <h4 class="section-title"><b>현장정보 등록</b>
+                                <p class="alert">* 표시는 <b>수정불가</b>합니다</p>
+                            </h4>
+                            <form class="form">
+                                <fieldset>
+                                    <label class="f-label required" for="sitename">현장명</label>
+                                    <input type="text" name="site-name" class="f-input" id="sitename" placeholder="현장명 입력" required/>
+                                </fieldset>
+    
+                                <fieldset>
+                                    <label class="f-label" for="f-type">건물종류</label>
+                                    <select name="promotionType" class="f-select" id="f-type">
+                                        <option value="건물종류">건물종류</option>
+                                    </select>
+                                </fieldset>
 
-                            <fieldset>
-                                <label class="f-label" for="f-type">홍보물 종류</label>
-                                <select name="promotionType" class="f-select" id="f-type">
-                                    <option value="물티슈">물티슈</option>
-                                </select>
-                            </fieldset>
+                                <fieldset>
+                                    <label class="f-label required" for="site-addr">근무지 주소</label>
+                                    <input type="text" name="site-addr" class="f-input" id="site-addr" placeholder="근무지 주소 입력" required/>
 
-                            <fieldset>
-                                <label class="f-label">디자인 시안</label>
-                                <input type="file" name="designDraft" class="f-file" id="f-designDraft" hidden/>
-                                
-                                <div class="input-wrap grid v-center">
-                                    <input type="text" name="designDraftName" class="f-input" placeholder="디자인 시안 첨부" value="" readonly/>
-                                    <label class="btn" for="f-designDraft">첨부</label>
-                                </div>
-                            </fieldset>
-                            <button class="list-add__btn" title="추가하기"></button>
-                        </form>
+                                    <label class="f-label required" for="site-addr2" hidden>근무지 상세주소</label>
+                                    <input type="text" name="site-addr2" class="f-input" id="site-addr2" placeholder="상세주소 입력" required/>
+                                </fieldset>
+
+                                <fieldset>
+                                    <label class="f-label required" for="company-addr">사업지 주소</label>
+                                    <input type="text" name="company-addr" class="f-input" id="company-addr" placeholder="사업지 주소 입력" required/>
+
+                                    <label class="f-label required" for="company-addr2" hidden>사업지 상세주소</label>
+                                    <input type="text" name="company-addr2" class="f-input" id="company-addr2" placeholder="상세주소 입력" required/>
+                                </fieldset>
+    
+                                <fieldset>
+                                    <label class="f-label">현장 사진 등록</label>
+                                    <input type="file" name="designDraft" class="f-file" id="f-sitePhoto" hidden/>
+                                    
+                                    <div class="input-wrap grid v-center">
+                                        <input type="text" name="sitePhotoName" class="f-input" placeholder="현장 사진 등록" value="" readonly/>
+                                        <label class="btn" for="f-sitePhoto">첨부</label>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </section>
+
+                        <section class="site-register__section">
+                            <h4 class="section-title"><b>관계사 및 담당자 등록</b></h4>
+                            <form class="form">
+                                <fieldset>
+                                    <label class="f-label required" for="comp1">신탁사</label>
+                                    <div class="input-wrap grid v-center">
+                                        <input type="text" name="comp1" class="f-input" id="comp1" value="" required/>
+                                        <button class="search-btn btn">검색</button>
+                                    </div>
+                                </fieldset>
+
+                                <fieldset>
+                                    <label class="f-label required" for="comp2">시공사</label>
+                                    <div class="input-wrap grid v-center">
+                                        <input type="text" name="comp2" class="f-input" id="comp2" value="" required/>
+                                        <button class="search-btn btn">검색</button>
+                                    </div>
+                                </fieldset>
+
+                                <fieldset>
+                                    <label class="f-label required" for="comp3">시행사</label>
+                                    <div class="input-wrap grid v-center">
+                                        <input type="text" name="comp3" class="f-input" id="comp3" value="" required/>
+                                        <button class="search-btn btn">검색</button>
+                                    </div>
+                                </fieldset>
+
+                                <fieldset>
+                                    <label class="f-label required" for="comp4">대행사</label>
+                                    <div class="input-wrap grid v-center">
+                                        <input type="text" name="comp4" class="f-input" id="comp4" value="" required/>
+                                        <button class="search-btn btn">검색</button>
+                                    </div>
+                                </fieldset>
+
+                                <fieldset>
+                                    <label class="f-label" for="personInCharge" hidden>담당자</label>
+                                    <input type="text" name="person-in-charge" class="f-input" id="personInCharge" placeholder="담당자"/>
+
+                                    <label class="f-label" for="personInChargeContact" hidden>연락처</label>
+                                    <input type="text" name="person-in-charge-contact" class="f-input" id="personInChargeContact" placeholder="연락처"/>
+
+                                    <label class="f-label" for="f-homepage" hidden>홈페이지</label>
+                                    <input type="text" name="homepage" class="f-input" id="f-homepage" placeholder="홈페이지"/>
+                                </fieldset>
+                            </form>
+                        </section>
+
+                        <section class="site-register__section">
+                            <h4 class="section-title"><b>상세정보</b></h4>
+                            <form class="form">
+                                <fieldset>
+                                    <label class="f-label" for="r-field">모집분야</label>
+                                    <select name="recruitment-field" class="f-select" id="r-field">
+                                        <option value="모집분야">모집분야</option>
+                                    </select>
+                                </fieldset>
+
+                                <fieldset>
+                                    <label class="f-label" for="select-fee">수수료 선택</label>
+                                    <select name="select-fee" class="f-select" id="select-fee">
+                                        <option value="퍼센트 지급">퍼센트 지급</option>
+                                    </select>
+                                </fieldset>
+
+                                <fieldset>
+                                    <label class="f-label" for="f-fee">수수료</label>
+                                    <input type="text" name="fee" class="f-input" id="f-fee" placeholder="수수료 %를 입력하세요."/>
+                                </fieldset>
+
+                                <fieldset>
+                                    <label class="f-label" for="daily-pay">일비</label>
+                                    <select name="daily-pay" class="f-select" id="daily-pay">
+                                        <option value="없음">없음</option>
+                                    </select>
+                                </fieldset>
+
+                                <fieldset>
+                                    <label class="f-label" for="acc-pay">숙비</label>
+                                    <select name="acc-pay" class="f-select" id="acc-pay">
+                                        <option value="없음">없음</option>
+                                    </select>
+                                </fieldset>
+
+                                <fieldset>
+                                    <textarea class="f-textarea" placeholder="상세정보를 입력하세요."></textarea>
+                                </fieldset>
+                            </form>
+                        </section>
                     </div>
                 </div>
             </div>
@@ -155,8 +265,7 @@
                         <button class="ft-btn">목록</button>
 
                         <div class="btn-wrap grid">
-                            <button class="btn cancel">삭제</button>
-                            <button class="btn main">수정</button>
+                            <button class="btn main">등록하기</button>
                         </div>
                     </div>
                 </div>

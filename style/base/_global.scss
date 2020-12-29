@@ -107,6 +107,7 @@
         & > li {
             display: flex;
             margin-bottom: 0.625rem;
+            word-break: break-word;
             & > span {
                 color: #8E8E8E;
                 font-size: 1rem;
