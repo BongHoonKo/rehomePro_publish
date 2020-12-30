@@ -24,6 +24,47 @@
     <body>
         <div class="wrap grey">
 
+            <!-- 출퇴근 미체크 사유 모달 -->
+            <aside class="modal commute-modal active">
+                <div class="modal-container">
+                    <div class="modal-header">
+                        <h3 class="modal-title">출퇴근 미체크 사유</h3>
+                        <button class="modal-close" onclick="closeModal(event);"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="body-content">
+                            <!-- 출퇴근 미체크 사유 내용 -->
+                            <ul class="reason-list">
+                                <li>
+                                    <span>날짜</span>03.23 (월)
+                                </li>
+                                <li>
+                                    <span>이름</span>서장훈
+                                </li>
+                                <li>
+                                    <span>미체크</span>출근
+                                <li>
+                                    <span>사유</span>
+                                    개인고객인 출퇴근 미체크
+                                    사유를 기재하면 이곳에
+                                    내용이 노출됩니다.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- 프로필 사진 모달 -->
+            <aside class="modal photo-modal active">
+                <div class="modal-container">
+                    <div class="modal-body">
+                        <button class="modal-close" onclick="closeModal(event);"></button>
+                        <img src="/images/img-test.png" alt=""/>
+                    </div>
+                </div>
+            </aside>
+
             <!-- 헤더 -->
             <header class="header">
                 <div class="hd-wrap">

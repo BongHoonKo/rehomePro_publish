@@ -223,7 +223,7 @@
                     font-weight: 500;
                     height: 1.625rem;
                     width: 5.125rem;
-                    background-color: $main-color;
+                    background-color: $comp-color;
                     border-radius: 0.25rem;
                     &:first-of-type {
                         margin-right: 3.125rem;
@@ -235,11 +235,11 @@
             }
             .btn {
                 font-size: 0.75rem;
-                color: $main-color;
+                color: $comp-color;
                 font-weight: 500;
                 padding: 0 0.5625rem;
                 height: 1.5rem;
-                border: 1px solid $main-color;
+                border: 1px solid $comp-color;
                 &:disabled {
                     color: #8E8E8E;
                     border-color: #8E8E8E;
@@ -288,7 +288,7 @@
                 margin-left: 2.5rem;
             }
             &:hover {
-                background-color: $main-color;
+                background-color: $comp-color;
                 box-shadow: 3px 3px 10px rgba(181, 30, 36, 0.24);
                 color: white;
             }

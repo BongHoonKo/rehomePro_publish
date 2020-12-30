@@ -2011,6 +2011,134 @@ html, body {
   padding: 3.75rem 5.625rem;
 }
 
+.modal.commute-modal .modal-container {
+  width: 17.5rem;
+}
+
+.modal.commute-modal .modal-container .modal-header {
+  padding: 1.1875rem;
+  border: 0;
+  border-radius: 5px 5px 0 0;
+}
+
+.modal.commute-modal .modal-container .modal-header .modal-title {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.modal.commute-modal .modal-container .modal-header .modal-close {
+  width: 1.25rem;
+  height: 1.25rem;
+  background-size: 0.625rem;
+  right: 0.875rem;
+}
+
+.modal.commute-modal .modal-container .modal-body {
+  border-radius: 0 0 5px 5px;
+}
+
+.modal.commute-modal .modal-container .modal-body .body-content {
+  padding: 0.9375rem 1.875rem 1.875rem;
+}
+
+.modal.commute-modal .modal-container .modal-body .body-content .reason-list > li {
+  font-size: 0.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal.commute-modal .modal-container .modal-body .body-content .reason-list > li + li {
+  margin-top: 0.75rem;
+}
+
+.modal.commute-modal .modal-container .modal-body .body-content .reason-list > li > span {
+  color: #8E8E8E;
+  width: 3.625rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+
+.modal.photo-modal .modal-container {
+  width: 25rem;
+}
+
+.modal.photo-modal .modal-container .modal-body {
+  background-color: transparent;
+  position: relative;
+}
+
+.modal.photo-modal .modal-container .modal-body .modal-close {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-image: url("/images/ico-close.svg");
+  background-position: center;
+  background-size: 1.25rem;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+}
+
+.modal.photo-modal .modal-container .modal-body > img {
+  max-width: 100%;
+}
+
+.modal.success-modal .modal-container {
+  width: 25.375rem;
+}
+
+.modal.success-modal .modal-container .modal-body {
+  border-radius: 5px;
+}
+
+.modal.success-modal .modal-container .modal-body .body-content {
+  padding: 3.125rem 1.875rem 1.25rem 1.875rem;
+}
+
+.modal.success-modal .modal-container .modal-body .body-content .success-txt {
+  font-size: 1.375rem;
+  font-weight: 500;
+  margin-bottom: 3.0625rem;
+  text-align: center;
+}
+
+.modal.success-modal .modal-container .modal-body .body-content .button-wrap .bottom-btn {
+  border-radius: 2px;
+}
+
+.modal.loginPage-modal .modal-container {
+  width: 32.5rem;
+}
+
+.modal.loginPage-modal .modal-container .modal-body {
+  border-radius: 10px;
+}
+
+.modal.loginPage-modal .modal-container .modal-body .body-content {
+  text-align: center;
+  padding: 3.75rem 2.75rem 2.875rem 2.75rem;
+}
+
+.modal.loginPage-modal .modal-container .modal-body .body-content .l-title {
+  font-size: 1.625rem;
+  font-weight: 500;
+  margin-bottom: 1.875rem;
+}
+
+.modal.loginPage-modal .modal-container .modal-body .body-content .l-title > strong {
+  color: #DD0011;
+  font-weight: 500;
+}
+
+.modal.loginPage-modal .modal-container .modal-body .body-content .l-txt {
+  font-size: 1.25rem;
+  color: #8B8B8B;
+  font-weight: normal;
+  margin-bottom: 2.75rem;
+}
+
 .modal .modal-container {
   position: relative;
   -webkit-transform: translate(0);
@@ -2049,17 +2177,31 @@ html, body {
   white-space: nowrap;
 }
 
+.modal .modal-header .modal-title.small {
+  font-size: 1.25rem;
+}
+
+.modal .modal-header .modal-title.small > small {
+  display: block;
+  font-size: 0.875rem;
+  color: #717171;
+  font-weight: normal;
+  margin-top: 0.5rem;
+}
+
 .modal .modal-header .modal-close {
   width: 2.5rem;
   height: 2.5rem;
   padding: 0;
   position: absolute;
-  top: 1.875rem;
+  top: 50%;
   right: 1.875rem;
   background-image: url("/images/ico-close.svg");
   background-position: center;
   background-size: 1.3125rem;
   background-repeat: no-repeat;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 @media all and (max-width: 1254px) {
@@ -2076,7 +2218,6 @@ html, body {
     height: 2rem;
     position: absolute;
     top: 50%;
-    margin-top: -1rem;
     right: 20px;
   }
   .modal .modal-header .modal-close > img {
@@ -2097,22 +2238,13 @@ html, body {
   padding: 0 0.5rem;
   height: 3.5rem;
   min-width: 10.25rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
 .modal .modal-body .body-content .button-wrap .bottom-btn + .bottom-btn {
   margin-left: 0.5rem;
-}
-
-.modal .modal-body .body-content .button-wrap .bottom-btn.close {
-  color: white;
-  font-size: 1rem;
-  font-weight: normal;
-  padding: 0 1.625rem;
-  height: 2.5rem;
-  background-color: #B7B7B7;
-  border-radius: 0.25rem;
-  min-width: 0;
-  padding: 0;
 }
 
 .modal .modal-body .body-content .button-wrap .bottom-btn.main {
@@ -2127,6 +2259,20 @@ html, body {
 
 .modal .modal-body .body-content .button-wrap .bottom-btn:only-of-type {
   min-width: 17.5rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+
+.modal .modal-body .body-content .button-wrap .bottom-btn.close {
+  color: white;
+  font-size: 1rem;
+  font-weight: normal;
+  padding: 0 1.625rem;
+  height: 2.5rem;
+  background-color: #B7B7B7;
+  border-radius: 0.25rem;
+  min-width: 0;
 }
 
 .modal .modal-body .body-content .site-name {
@@ -2219,12 +2365,20 @@ html, body {
   margin-bottom: 3.75rem;
 }
 
-.modal .modal-body .body-content .comp-wrap .col:nth-of-type(2n+1) {
+.modal .modal-body .body-content .comp-wrap .col[class*='size_']:nth-of-type(2n+1) {
   padding-right: 1.25rem;
 }
 
-.modal .modal-body .body-content .comp-wrap .col:nth-of-type(2n) {
+.modal .modal-body .body-content .comp-wrap .col[class*='size_']:nth-of-type(2n) {
   padding-left: 1.25rem;
+}
+
+.modal .modal-body .body-content .comp-wrap .col:not([class*='size_']) {
+  width: 100%;
+}
+
+.modal .modal-body .body-content .comp-wrap .col:not([class*='size_']):not(:last-of-type) {
+  margin-bottom: 2rem;
 }
 
 .modal .modal-body .body-content .comp-wrap .comp-list__wrap .list-title {
@@ -2288,6 +2442,13 @@ html, body {
   white-space: nowrap;
 }
 
+.modal .modal-body .body-content .comp-wrap .comp-list__wrap .comp-list.hor > li > a {
+  color: #42A2FC;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .modal .modal-body .body-content .comp-add {
   padding: 0 4rem;
   margin-bottom: 3.75rem;
@@ -2321,7 +2482,7 @@ html, body {
 .modal .modal-body .body-content .detail-content .detail-txt {
   padding: 1.5rem 1.875rem;
   border-bottom: 1px solid #EBEBEB;
-  height: 12rem;
+  min-height: 12rem;
   white-space: pre-line;
   line-height: 1.5;
   overflow-y: auto;
@@ -2341,12 +2502,57 @@ html, body {
 
 .modal .modal-body .body-content .detail-content .detail-add__textarea {
   width: 100%;
+  max-width: 100%;
   padding: 1.5rem 1.875rem;
   border: 1px solid #EBEBEB;
-  height: 12rem;
+  min-height: 12rem;
   white-space: pre-line;
   line-height: 1.5;
   overflow-y: auto;
+}
+
+.modal .modal-body .body-content .position-check {
+  margin-bottom: 3.75rem;
+}
+
+.modal .modal-body .body-content .position-check .checkbox-wrap .f-checkbox:checked + .f-checkbox__label .f-checkbox__faux {
+  border-color: #DD0011;
+}
+
+.modal .modal-body .body-content .position-check .checkbox-wrap .f-checkbox:checked + .f-checkbox__label .f-checkbox__faux::before {
+  background-color: #DD0011;
+}
+
+.modal .modal-body .body-content .position-check .checkbox-wrap .f-checkbox__label {
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: normal;
+  padding: 1.25rem 2rem;
+  border-bottom: 1px solid #E3E3E3;
+}
+
+.modal .modal-body .body-content .position-check .checkbox-wrap .f-checkbox__label .f-checkbox__faux {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  border: 2px solid #C3C3C3;
+  position: relative;
+  margin-left: auto;
+}
+
+.modal .modal-body .body-content .position-check .checkbox-wrap .f-checkbox__label .f-checkbox__faux::before {
+  content: '';
+  width: block;
+  width: 0.75rem;
+  height: 0.75rem;
+  position: absolute;
+  background-color: #C3C3C3;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
 }
 
 .reg-layout {
@@ -3229,7 +3435,7 @@ html, body {
   font-weight: 500;
   height: 1.625rem;
   width: 5.125rem;
-  background-color: #DD0011;
+  background-color: #b51e24;
   border-radius: 0.25rem;
 }
 
@@ -3243,11 +3449,11 @@ html, body {
 
 .commuting-wrap .commuting-list > li .btn {
   font-size: 0.75rem;
-  color: #DD0011;
+  color: #b51e24;
   font-weight: 500;
   padding: 0 0.5625rem;
   height: 1.5rem;
-  border: 1px solid #DD0011;
+  border: 1px solid #b51e24;
 }
 
 .commuting-wrap .commuting-list > li .btn:disabled {
@@ -3305,7 +3511,7 @@ html, body {
 }
 
 .commute-check__box .commute-check .commute-btn:hover {
-  background-color: #DD0011;
+  background-color: #b51e24;
   -webkit-box-shadow: 3px 3px 10px rgba(181, 30, 36, 0.24);
           box-shadow: 3px 3px 10px rgba(181, 30, 36, 0.24);
   color: white;
