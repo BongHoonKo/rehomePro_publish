@@ -24,6 +24,55 @@
     <body>
         <div class="wrap grey">
 
+            <!-- 공지,알람 상세 모달 -->
+            <aside class="modal l-modal active">
+                <div class="modal-container">
+                    <div class="modal-header">
+                        <h3 class="modal-title">주식회사 스티브</h3>
+                        <button class="modal-close" onclick="closeModal(event);"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="body-content">
+                            <!-- 공지 내용 -->
+                            <div class="detail-content">
+                                <h4 class="detail-title grid">광명 푸르지오 센트베르 분양현장에서 알립니다.
+                                    <span class="date">2020.03.24</span>
+                                </h4>
+                                <p class="detail-txt">디자인 판촉물이 등록되었으니 확인바랍니다.</p>
+                            </div>
+
+                            <div class="button-wrap grid h-center">
+                                <button type="button" class="bottom-btn cancel" title="삭제">삭제</button>
+                                <button type="button" class="bottom-btn main" title="수정">수정</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- 공지,알람 등록 모달 -->
+            <aside class="modal l-modal active">
+                <div class="modal-container">
+                    <div class="modal-header">
+                        <h3 class="modal-title">알림 및 공지사항 등록</h3>
+                        <button class="modal-close" onclick="closeModal(event);"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="body-content">
+                            <!-- 공지 등록 양식 -->
+                            <div class="detail-content">
+                                <input type="text" class="detail-add__input" placeholder="제목"/>
+                                <textarea class="detail-add__textarea"></textarea>
+                            </div>
+
+                            <div class="button-wrap grid h-center">
+                                <button type="button" class="bottom-btn main" title="등록하기">등록하기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
             <!-- 헤더 -->
             <header class="header">
                 <div class="hd-wrap">

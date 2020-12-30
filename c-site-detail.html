@@ -106,47 +106,116 @@
                     </section>
                 </aside>
                 
-                <h2 class="header-title">디자인 관리</h2>
+                <h2 class="header-title">분양현장</h2>
             </header>
 
-            <!-- 디자인 관리(등록) -->
-            <div class="layout design-layout">
+            <!-- 상담사 분양현장 (detail) -->
+            <div class="layout site-layout">
                 <div class="container">
-                    <div role="tablist" aria-label="홍보물 등록 탭리스트" class="design-register__tab grid">
-                        <button role="tab" aria-selected="true" aria-controls="panel-1" id="tab-1" tabindex="0">
-                              <span>홍보물 등록하기</span>
-                        </button>
-                    </div>
-
-                    <!-- 디자인 등록 판넬 -->
-                    <div id="panel-1" role="tabpanel" tabindex="0" class="design-register__tabpanel" aria-labelledby="tab-1">
-                        <form class="form">
-                            <div class="fieldset-wrap">
-                                <fieldset>
-                                    <label class="f-label required" for="sitename">현장명</label>
-                                    <input type="text" name="site-name" class="f-input" id="sitename" placeholder="현장명 입력" required/>
-                                </fieldset>
-
-                                <fieldset>
-                                    <label class="f-label" for="f-type">홍보물 종류</label>
-                                    <select name="promotionType" class="f-select" id="f-type">
-                                        <option value="물티슈">물티슈</option>
-                                    </select>
-                                </fieldset>
-
-                                <fieldset>
-                                    <label class="f-label">디자인 시안</label>
-                                    <input type="file" name="designDraft" class="f-file" id="f-designDraft" hidden/>
-                                    
-                                    <div class="input-wrap grid v-center">
-                                        <input type="text" name="designDraftName" class="f-input" placeholder="디자인 시안 첨부" value="" readonly/>
-                                        <label class="btn" for="f-designDraft">첨부</label>
-                                    </div>
-                                </fieldset>
+                    <section class="site-detail__section c-site-detail">
+                        <div class="site-detail__top grid v-center">
+                            <div class="site-img" style="background-image: url('/images/site-detail-test.jpg')">
+                                <mark class="progress-mark">진행</mark>
+                                <mark class="position-mark">
+                                    <span>팀장/팀원</span>
+                                    <span>기본급</span>
+                                </mark>
+                                <div class="site-img__btns grid v-center h-center">
+                                    <button type="button" class="download s-btn" title="다운로드"></button>
+                                    <button type="button" class="share s-btn" title="공유"></button>
+                                </div>
                             </div>
-                            <button class="list-add__btn" title="추가하기"></button>
-                        </form>
-                    </div>
+                           <div class="site-txt">
+                               <h3 class="site-title">광명 푸르지오 센트베르 분양영업 (신규)
+                                   <button class="site-like grid v-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15.368" height="13.875" viewBox="0 0 15.368 13.875">
+                                        <path id="패스_2243" data-name="패스 2243" d="M-7049.68,13.325a8.3,8.3,0,0,0-3.216-.427.989.989,0,0,1-.961.767h-3.156a1,1,0,0,1-.987-.993V4.819a1,1,0,0,1,.987-.994h3.156a.994.994,0,0,1,.77.379,3.8,3.8,0,0,0,1.108-2.881A1.36,1.36,0,0,1-7050.658,0h1.822a1.336,1.336,0,0,1,1.325,1.351,11.331,11.331,0,0,1-.458,3.243h3.6a1.749,1.749,0,0,1,1.735,1.751c0,.016,0,.03-.005.044l-.556,4.852a4.927,4.927,0,0,1-.351,1.58,1.883,1.883,0,0,1-1.42,1.049.51.51,0,0,1-.073.005A13.885,13.885,0,0,1-7049.68,13.325Zm.236-.756a12.713,12.713,0,0,0,4.357.515.977.977,0,0,0,.829-.6,4.644,4.644,0,0,0,.281-1.328l.548-4.824a.94.94,0,0,0-.938-.945h-4.154a.362.362,0,0,1-.167-.035.4.4,0,0,1-.2-.524,9.358,9.358,0,0,0,.583-3.491.525.525,0,0,0-.533-.543h-1.822a.545.545,0,0,0-.532.571,4.752,4.752,0,0,1-1.678,3.7v7.046h.177A9.415,9.415,0,0,1-7049.444,12.568Z" transform="translate(7058)" fill="#a7a7a7"/>
+                                    </svg>
+                                    1200                              
+                                   </button>
+                               </h3>
+                               <ul class="site-info__list">
+                                    <li>
+                                       <span>현장명</span>광명 푸르지오 센트베르 분양영업 (신규)
+                                    </li>
+                                    <li>
+                                        <span>업종분류</span>아파트, 레지던스, 오피스텔
+                                    </li>
+                                    <li>
+                                        <span>근무지 주소</span>경기도 광명시 광명동 123번지
+                                        <button class="map-btn">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="13.139" height="17.653" viewBox="0 0 13.139 17.653">
+                                                <path id="패스_2167" data-name="패스 2167" d="M12.149,2A6.569,6.569,0,0,0,5.58,8.569h0c0,5.226,6.147,11.083,6.147,11.083s6.992-6.191,6.992-11.083A6.569,6.569,0,0,0,12.149,2Zm0,9.8A3.411,3.411,0,1,1,15.56,8.393h0A3.411,3.411,0,0,1,12.149,11.8Z" transform="translate(-5.58 -2)" fill="#b51e24"/>
+                                            </svg>                                              
+                                            지도
+                                        </button>
+                                    </li>
+                               </ul>
+                           </div>
+                        </div>
+                        <div class="site-detail__info grid">
+                           <article class="col size_6-of-12">
+                               <h4 class="col-title">관계사 및 담당자 정보</h4>
+                               <ul class="col-list has-btn">
+                                   <li class="grid">
+                                       <span>시행사</span>주식회사 스티브
+                                       <button type="button" class="info-btn" title="정보보기">정보보기</button>
+                                   </li>
+                                   <li class="grid">
+                                        <span>시공사</span>삼성물산 건설부문
+                                        <button type="button" class="info-btn" title="정보보기">정보보기</button>
+                                    </li>
+                                    <li class="grid">
+                                        <span>대행사</span>현대중공업
+                                        <button type="button" class="info-btn" title="정보보기">정보보기</button>
+                                    </li>
+                               </ul>
+                           </article>
+
+                           <article class="col size_6-of-12">
+                                <h4 class="col-title">상세정보</h4>
+                                <ul class="col-list">
+                                    <li class="grid">
+                                        <span>모집분야</span>팀장/팀원 모집합니다.
+                                    </li>
+                                    <li class="grid">
+                                        <span>근무일</span>월, 화, 수, 목, 금
+                                    </li>
+                                    <li class="grid">
+                                        <span>근무시간</span>09:00 - 18:00
+                                    </li>
+                                    <li class="grid">
+                                        <span>급여</span>100,000원
+                                    </li>
+                                    <li class="grid">
+                                        <span>일비</span>30,000원
+                                    </li>
+                                    <li class="grid">
+                                        <span>숙비</span>100,000원
+                                    </li>
+                                </ul>
+                            </article>
+                        </div>
+                        <div class="site-detail__textarea">●  현수막/전단지 지원됩니다.
+
+                            ●  성별 무관
+
+                            ●  나이 무관
+
+                            ●  경력 1년 이상
+
+                            ●  영업지원: 영업비 지원
+
+                            ●  자세한 사항은 담당자에게 연락주세요.
+                        </div>
+                        <div class="site-detail__bottom">
+                            <ul class="bottom-list">
+                                <li><span>신청일</span>2020.09.05</li>
+                                <li><span>승인일</span>2020.09.05</li>
+                                <li><span>신청 직책</span>본부장, 팀장, 팀원</li>
+                            </ul>
+                        </div>
+                    </section>
                 </div>
             </div>
 
@@ -157,8 +226,8 @@
                         <button class="ft-btn">목록</button>
 
                         <div class="btn-wrap grid">
-                            <button class="btn cancel">삭제</button>
-                            <button class="btn main">수정</button>
+                            <button class="btn cancel">참여 취소</button>
+                            <button class="btn main">이미 참여한 분양현장입니다</button>
                         </div>
                     </div>
                 </div>

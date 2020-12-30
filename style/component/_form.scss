@@ -1,11 +1,41 @@
 .form {
     border: 0;
-    padding: 0 0.875rem;
+    //padding: 0 0.875rem;
+    padding: 0;
+    .fieldset-wrap {
+        & + .fieldset-wrap {
+            margin-top: 2.5rem;
+            padding-top: 2.5rem;
+            border-top: 1px solid #ebebeb;
+        }
+    }
     fieldset {
         border: 0;
         padding: 0;
         & + fieldset {
             margin-top: 2.5rem;
+        }
+        &.hor-fieldset {
+            .f-label {
+                width: 8.3125rem;
+                margin-bottom: 0;
+            }
+        }
+        .date-sel {
+            & > span {
+                display: inline-block;
+                margin: 0 1.3rem;
+            }
+            .f-select {
+                margin-top: 0 !important;
+                &.year {
+                    width: 10rem;
+                    margin-right: 0.625rem;
+                }
+                &.mon {
+                    width: 6.875rem;
+                }
+            }
         }
         .alert {
             color: $main-color;
@@ -40,6 +70,28 @@
                         border-color: $main-color;
                         &::before {
                             background-color: $main-color;
+                        }
+                    }
+                }
+            }
+        }
+        .checkbox-wrap {
+            flex: 1 1 auto;
+            .checkbox-label {
+                cursor: pointer;
+                padding-left: 1.6875rem;
+                font-size: 1.125rem;
+                font-weight: normal;
+                & > svg {
+                    transform: translateY(0.1rem);
+                    margin-right: 0.625rem;
+                }
+            }
+            input[type='checkbox'] {
+                &:checked + .checkbox-label {
+                    & > svg  {
+                        & > path {
+                            fill: $main-color;
                         }
                     }
                 }
@@ -113,6 +165,7 @@
             background-repeat: no-repeat;
             -webkit-appearance: none;
             -moz-appearance: none;
+            padding-right: 2.5rem;
             &::-ms-expand {
                 display: none;
             }
@@ -207,7 +260,8 @@
 .section-title {
     font-size: 1.5rem;
     font-weight: normal;
-    padding: 1.5rem 0.875rem;
+    //padding: 1.5rem 0.875rem;
+    padding: 1.5rem 0;
     padding-top: 0;
     border-bottom: 2px solid black;
     margin-bottom: 3.125rem;

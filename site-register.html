@@ -24,6 +24,44 @@
     <body>
         <div class="wrap grey">
 
+            <!-- 업체등록 모달 -->
+            <aside class="modal active">
+                <div class="modal-container">
+                    <div class="modal-header">
+                        <h3 class="modal-title">업체 등록</h3>
+                        <button class="modal-close" onclick="closeModal(event);"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="body-content">
+                            <form class="form comp-add">
+                                <fieldset>
+                                    <label class="f-label" for="f-1" hidden>상호</label>
+                                    <input type="text" name="f-1" class="f-input" id="f-1" placeholder="상호"/>
+
+                                    <label class="f-label" for="f-2" hidden>대표자</label>
+                                    <input type="text" name="f-2" class="f-input" id="f-2" placeholder="대표자"/>
+
+                                    <label class="f-label" for="f-3" hidden>소재지</label>
+                                    <input type="text" name="f-3" class="f-input" id="f-3" placeholder="소재지"/>
+
+                                    <label class="f-label" for="f-4" hidden>연락처</label>
+                                    <input type="text" name="f-4" class="f-input" id="f-4" placeholder="연락처"/>
+
+                                    <label class="f-label" for="f-5" hidden>시공능력 평가액</label>
+                                    <input type="text" name="f-5" class="f-input" id="f-5" placeholder="시공능력 평가액"/>
+
+                                    <label class="f-label" for="f-6" hidden>홈페이지</label>
+                                    <input type="text" name="f-6" class="f-input" id="f-6" placeholder="홈페이지"/>
+                                </fieldset>
+                            </form>
+                            <div class="button-wrap grid h-center">
+                                <button type="button" class="bottom-btn main" title="등록하기">등록하기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
             <!-- 헤더 -->
             <header class="header">
                 <div class="hd-wrap">
@@ -235,18 +273,47 @@
                                     <input type="text" name="fee" class="f-input" id="f-fee" placeholder="수수료 %를 입력하세요."/>
                                 </fieldset>
 
-                                <fieldset>
+                                <fieldset class="grid v-center hor-fieldset">
                                     <label class="f-label" for="daily-pay">일비</label>
                                     <select name="daily-pay" class="f-select" id="daily-pay">
                                         <option value="없음">없음</option>
                                     </select>
                                 </fieldset>
 
-                                <fieldset>
+                                <fieldset class="grid v-center hor-fieldset">
                                     <label class="f-label" for="acc-pay">숙비</label>
                                     <select name="acc-pay" class="f-select" id="acc-pay">
                                         <option value="없음">없음</option>
                                     </select>
+                                </fieldset>
+
+                                <fieldset class="grid v-center hor-fieldset">
+                                    <label class="f-label">식사제공</label>
+                                    <div class="checkbox-wrap grid v-center">
+                                        <input type="checkbox" id="meal-1" hidden/>
+                                        <label for="meal-1" class="checkbox-label col size_4-of-12">
+                                            <svg id="Selection_Control_Checkbox_On_Enabled" data-name="Selection Control / Checkbox / On / Enabled" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                                <path id="Selection_Control_Checkbox_On_Enabled-2" data-name="Selection Control / Checkbox / On / Enabled" d="M20.222-681H7.778A1.777,1.777,0,0,0,6-679.222v12.444A1.777,1.777,0,0,0,7.778-665H20.222A1.777,1.777,0,0,0,22-666.778v-12.444A1.777,1.777,0,0,0,20.222-681Zm-8,12.444L7.778-673l1.253-1.253,3.191,3.182,6.747-6.747,1.253,1.262Z" transform="translate(-6 681)" fill="#c3c3c3"/>
+                                            </svg>
+                                            조식
+                                        </label>
+
+                                        <input type="checkbox" id="meal-2" hidden/>
+                                        <label for="meal-2" class="checkbox-label col size_4-of-12">
+                                            <svg id="Selection_Control_Checkbox_On_Enabled" data-name="Selection Control / Checkbox / On / Enabled" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                                <path id="Selection_Control_Checkbox_On_Enabled-2" data-name="Selection Control / Checkbox / On / Enabled" d="M20.222-681H7.778A1.777,1.777,0,0,0,6-679.222v12.444A1.777,1.777,0,0,0,7.778-665H20.222A1.777,1.777,0,0,0,22-666.778v-12.444A1.777,1.777,0,0,0,20.222-681Zm-8,12.444L7.778-673l1.253-1.253,3.191,3.182,6.747-6.747,1.253,1.262Z" transform="translate(-6 681)" fill="#c3c3c3"/>
+                                            </svg>
+                                            중식
+                                        </label>
+
+                                        <input type="checkbox" id="meal-3" hidden/>
+                                        <label for="meal-3" class="checkbox-label col size_4-of-12">
+                                            <svg id="Selection_Control_Checkbox_On_Enabled" data-name="Selection Control / Checkbox / On / Enabled" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                                <path id="Selection_Control_Checkbox_On_Enabled-2" data-name="Selection Control / Checkbox / On / Enabled" d="M20.222-681H7.778A1.777,1.777,0,0,0,6-679.222v12.444A1.777,1.777,0,0,0,7.778-665H20.222A1.777,1.777,0,0,0,22-666.778v-12.444A1.777,1.777,0,0,0,20.222-681Zm-8,12.444L7.778-673l1.253-1.253,3.191,3.182,6.747-6.747,1.253,1.262Z" transform="translate(-6 681)" fill="#c3c3c3"/>
+                                            </svg>
+                                            석식
+                                        </label>
+                                    </div>
                                 </fieldset>
 
                                 <fieldset>

@@ -3,6 +3,99 @@
     border-top: 3px solid $main-color;
     padding: 3.75rem;
     padding-bottom: 5.625rem;
+    &.c-site-detail {
+        .site-detail__top {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2.5rem;
+            border-bottom: 1px solid #EBEBEB;
+            .site-info__list {
+                padding-top: 2.1875rem;
+                border-top: 1px solid #EBEBEB;
+                & > li {
+                    .map-btn {
+                        color: $yellow;
+                        & > svg {
+                            & > path {
+                                fill: $yellow;
+                            }
+                        }
+                    }
+                }
+            }
+            .site-img {
+                &:hover {
+                    .site-img__btns {
+                        display: flex;
+                    }
+                }
+                .site-img__btns {
+                    display: none;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0,0,0,0.4);
+                    z-index: 2;
+                    .s-btn {
+                        width: 3.75rem;
+                        height: 3.75rem;
+                        background-size: 1.375rem;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-color: rgba(0,0,0,0.7);
+                        &.download {
+                            background-image: url('/images/ico-download.svg');
+                            margin-right: 0.75rem;
+                        }
+                        &.share {
+                            background-image: url('/images/ico-share.svg');
+                            background-size: 1.4375rem;
+                        }
+                    }
+                }
+            }
+        }
+        .site-detail__info {
+            padding-bottom: 2.5rem;
+            margin-bottom: 2.5rem;
+            border-bottom: 1px solid #EBEBEB;
+            .col-list {
+                & > li {
+                    .info-btn {
+                        color: #8B8B8B;
+                        border-color: #8B8B8B;
+                        background-image: url('/images/ico-right.svg');
+                        border-radius: 0.125rem;
+                    }
+                }
+            }
+        }
+        .site-detail__textarea {
+            margin-bottom: 2.5rem;
+        }
+    }
+}
+.site-detail__bottom {
+    background-color: rgba(234,234,234,0.5);
+    padding: 1.6875rem 3.125rem;
+    .bottom-list {
+        & > li {
+            font-size: 1rem;
+            font-weight: 500;
+            display: flex;
+            word-break: break-word;
+            & + li {
+                margin-top: 0.5rem;
+            }
+            & > span {
+                width: 5.125rem;
+                flex: 0 0 auto;
+                color: #8E8E8E;
+                font-weight: normal;
+            }
+        }
+    }
 }
 .site-detail__top {
     margin-bottom: 6.25rem;
@@ -11,6 +104,20 @@
         font-weight: 500;
         margin-bottom: 2.1875rem;
         line-height: 1;
+        .site-like {
+            color: #A7A7A7;
+            font-size: 0.875rem;
+            font-weight: normal;
+            border: 1px solid #A7A7A7;
+            border-radius: 0.125rem;
+            height: 1.625rem;
+            padding: 0 0.625rem;
+            margin-top: 0.75rem;
+            margin-bottom: 2.1875rem;
+            & > svg {
+                margin-right: 0.35rem;
+            }
+        }
     }
     .site-img {
         width: 25.625rem;
@@ -69,7 +176,6 @@
                 margin-bottom: auto;
                 & > svg {
                     width: 0.8125rem;
-                    height: auto;
                     margin-top: 0.125rem;
                     transform: translateY(1.5px);
                 }
@@ -114,6 +220,7 @@
                 background-position: right 0.5rem center;
                 margin-left: auto;
                 flex: 0 0 auto;
+                margin-top: 0.1rem;
             }
         }
     }
@@ -139,6 +246,32 @@
     width: 100%;
     height: 8.125rem;
     left: 0;
+    &.c-search {
+        height: 5rem;
+        top: -2.5rem;
+        .search {
+            .input-wrap {
+                padding: 0;
+                height: 100%;
+                background-color: transparent;
+                .search-input {
+                    height: 100%;
+                    border: 1.5px solid $main-color;
+                    border-radius: 0.25rem 0 0 0.25rem;
+                    width: 52rem;
+                    background-position: 2.125rem center;
+                    padding-left: 4rem;
+                    padding-right: 1rem;
+                    font-size: 1.125rem;
+                }
+            }
+            .search-btn__full {
+                border-radius: 0 0.25rem 0.25rem 0;
+                padding-left: 4.5625rem;
+                padding-right: 4.5625rem;
+            }
+        }
+    }
     .search {
         background-color: white;
         height: 100%;
@@ -262,7 +395,6 @@
                     & > svg {
                         margin: 0;
                         width: 1rem;
-                        height: auto;
                     }
                 }
             }
