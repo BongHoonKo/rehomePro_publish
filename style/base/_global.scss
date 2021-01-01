@@ -71,6 +71,11 @@
             background-color: $main-color;
             color: white;
         }
+        @include respond-to(max-width, con) {
+            font-size: 1.165rem;
+            border-bottom: 1px solid #EBEBEB;
+            padding: 0.8333rem 0.5rem;
+        }
     }
 }
 .r-tabpanel {

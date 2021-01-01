@@ -233,12 +233,19 @@
     white-space: pre-line;
     font-size: 1.125rem;
 }
-
+.site-layout {
+    @include respond-to(max-width, con) {
+        padding: 0;
+    }
+}
 .site-layout .site-list__container {
     position: relative;
     padding-top: 9.1875rem;
     margin-left: -0.5rem;
     margin-right: -0.5rem;
+    @include respond-to(max-width, con) {
+        margin: 0;
+    }
 }
 .site-search__wrap {
     position: absolute;
@@ -304,6 +311,13 @@
         & > li {
             padding: 0 0.5rem;
             margin-bottom: 3.125rem;
+            @include respond-to(max-width, con) {
+                padding: 0;
+                margin-bottom: 0;
+                & + li {
+                    margin-top: 0.666rem;
+                }
+            }
             & > a {
                 display: block;
             }
@@ -313,6 +327,9 @@
                 background-position: center;
                 background-repeat: no-repeat;
                 position: relative;
+                @include respond-to(max-width, con) {
+                    height: 10rem;
+                }
                 .progress-mark {
                     background-color: $comp-color;
                     color: white;
@@ -324,6 +341,10 @@
                     top: 0.875rem;
                     right: 0.875rem;
                     box-shadow: 5px 5px 10px rgba(181, 30, 36, 0.16);
+                    @include respond-to(max-width, con) {
+                        font-size: 1.165rem;
+                        padding: 0.1666rem 0.8333rem;
+                    }
                 }
                 .position-mark {
                     background-color: rgba(0,0,0,0.48);
@@ -338,21 +359,35 @@
                         padding: 0.25rem 1.125rem;
                         display: inline-block;
                     }
+                    @include respond-to(max-width, con) {
+                        font-size: 1rem;
+                    }
                 }
             }
             .site-txt {
                 padding: 1.25rem;
                 background-color: white;
+                @include respond-to(max-width, con) {
+                    padding: 1rem 1.666rem 1.333rem;
+                }
                 .site-title {
                     font-size: 1rem;
                     font-weight: 500;
                     margin-bottom: 0.125rem;
+                    @include respond-to(max-width, con) {
+                        font-size: 1.333rem;
+                        margin-bottom: 0.1666rem;
+                    }
                 }
                 .site-location {
                     color: #8E8E8E;
                     font-size: 0.75rem;
                     font-weight: 500;
                     margin-bottom: 1rem;
+                    @include respond-to(max-width, con) {
+                        font-size: 1rem;
+                        margin-bottom: 1.25rem;
+                    }
                 }
                 .site-txt__ft {
                     .site-type {
@@ -362,12 +397,18 @@
                         font-size: 0.75rem;
                         font-weight: 500;
                         color: #606060;
+                        @include respond-to(max-width, con) {
+                            font-size: 1rem;
+                        }
                     }
                     .site-star__wrap {
                         margin-left: auto;
                         font-size: 0.8125rem;
                         color: #404040;
                         font-weight: 500;
+                        @include respond-to(max-width, con) {
+                            font-size: 1.08333rem;
+                        }
                         .site-star {
                             position: relative;
                             margin-right: 0.5rem;
@@ -395,6 +436,17 @@
                     & > svg {
                         margin: 0;
                         width: 1rem;
+                    }
+                }
+                @include respond-to(max-width, con) {
+                    bottom: -1.25rem;
+                    right: 1.666rem;
+                    .like-check__label {
+                        width: 2.5rem;
+                        height: 2.5rem;
+                        & > svg {
+                            width: 1.2rem;
+                        }
                     }
                 }
             }

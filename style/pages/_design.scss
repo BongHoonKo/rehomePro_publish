@@ -1,6 +1,13 @@
 .design-layout  {
+    @include respond-to(max-width, con) {
+        padding: 0;
+        padding-bottom: 3.5rem;
+    }
     .container {
         padding: 3.75rem 0 12.5rem 0;
+        @include respond-to(max-width, con) {
+            padding: 0;
+        }
     }
 }
 .design-search__wrap {
@@ -59,12 +66,19 @@
 .design-detail__section {
     background-color: white;
     border-top: 3px solid $main-color;
+    @include respond-to(max-width, con) {
+        border-top: 0;
+    }
     .design-detail {
         width: 52rem;
         margin-left: auto;
         margin-right: auto;
         padding-top: 4.8125rem;
         padding-bottom: 10.625rem;
+        @include respond-to(max-width, con) {
+            width: 100%;
+            padding: 0;
+        }
         .detail-hd {
             font-size: 2rem;
             font-weight: 500;
@@ -72,15 +86,27 @@
             text-align: center;
             border-bottom: 1.5px solid #EBEBEB;
             line-height: 1;
+            @include respond-to(max-width, con) {
+                display: none;
+            }
         }
         .detail-info__wrap {
             padding: 2rem 5rem;
             padding-right: 1.625rem;
             border-bottom: 1.5px solid #EBEBEB;
             margin-bottom: 5.75rem;
+            @include respond-to(max-width, con) {
+                display: block;
+                padding: 2.15rem 20px;
+                border-bottom: 8px solid #EAEAEA;
+                margin-bottom: 0;
+            }
             .detail-info {
                 flex: 1 1 auto;
                 margin: 0;
+                @include respond-to(max-width, con) {
+                    margin-bottom: 2.165rem;
+                }
                 & > dt {
                     width: 15%;
                     font-size: 1.125rem;
@@ -89,6 +115,10 @@
                     &:not(:last-of-type) {
                         margin-bottom: 0.5rem;
                     }
+                    @include respond-to(max-width, con) {
+                        font-size: 1.165rem;
+                        width: 20%;
+                    }
                 }
                 & > dd {
                     width: 85%;
@@ -96,6 +126,10 @@
                     font-size: 1.125rem;
                     font-weight: normal;
                     padding-right: 1rem;
+                    @include respond-to(max-width, con) {
+                        font-size: 1.165rem;
+                        width: 80%;
+                    }
                 }
             }
             .btn {
@@ -106,12 +140,34 @@
                 padding: 0 3.125rem;
                 height: 3.5rem;
                 box-shadow: 5px 5px 10px rgba(255, 0, 0, 0.16);
+                @include respond-to(max-width, con) {
+                    margin: 0  auto;
+                    width: 90%;
+                    width: calc(100% - 2.5rem);
+                    font-size: 1.165rem;
+                    color: $main-color;
+                    background-color: white;
+                    border: 1.5px solid $main-color;
+                    border-radius: 4px;
+                    box-shadow: 3px 3px 10px rgba(255, 0, 0, 0.06);
+                }
             }
         }
         .draft-list {
+            @include respond-to(max-width, con) {
+                padding: 2.165rem 20px;
+            }
             & > li {
                 width: 50%;
                 margin-bottom: 1rem;
+                @include respond-to(max-width, con) {
+                    width: 100%;
+                    margin-bottom: 2.165rem;
+                    padding: 0 !important;
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+                }
                 &:nth-of-type(2n) {
                     padding-left: 0.5rem;
                 }
@@ -127,11 +183,21 @@
                 .like-check__wrap {
                     margin-left: auto;
                     margin-right: 2rem;
+                    @include respond-to(max-width, con) {
+                        margin-right: 1.65rem;
+                    }
                     .like-check__label {
                         font-size: 0.875rem;
                         font-weight: normal;
+                        @include respond-to(max-width, con) {
+                            font-size: 1rem;
+                        }
                         & > svg {
                             width: 1rem;
+                            @include respond-to(max-width, con) {
+                                width: 1.25rem;
+                                margin-right: 0.65rem;
+                            }
                         }
                     }
                 }
@@ -171,5 +237,29 @@
         width: 46.5625rem;
         margin-left: auto;
         margin-right: auto;
+    }
+}
+
+.design-detail__ft {
+    @include respond-to(max-width, con) {
+        bottom: 5rem;
+        height: 3.65rem;
+        padding: 0;
+        .btn-wrap {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            .btn {
+                height: 100%;
+                margin: 0 !important;
+                font-size: 1.165rem;
+                &.cancel {
+                    width: 35%;
+                }
+                &.main {
+                    width: 65%;
+                }
+            }
+        }
     }
 }

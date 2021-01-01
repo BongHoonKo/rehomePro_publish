@@ -21,4 +21,10 @@ html,body {
     @include respond-to(max-width, 450px) {
         font-size: 12px;
     }
+    @include respond-to(max-width, 320px) {
+        font-size: 10px;
+    }
+    @include respond-to(max-width, 280px) {
+        font-size: 8px;
+    }
 }

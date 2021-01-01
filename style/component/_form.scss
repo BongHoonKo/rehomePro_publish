@@ -349,6 +349,10 @@
 .search {
     position: relative;
     display: inline-block;
+    @include respond-to(max-width, con) {
+        flex: 1 1 auto;
+        display: flex;
+    }
     .search-input {
         border: 1px solid #EBEBEB;
         width: 25rem;
@@ -358,6 +362,12 @@
         font-size: 0.875rem;
         color: #767676;
         font-weight: normal;
+        @include respond-to(max-width, con) {
+            flex: 1 1 auto;
+            margin-right: 0.5rem;
+            font-size: 1rem;
+            width: 15.83rem;
+        }
     }
     .search-btn {
         width: 2.5rem;
@@ -370,6 +380,11 @@
         background-position: center;
         background-size: 0.735rem;
         z-index: 1;
+        @include respond-to(max-width, con) {
+            position: relative;
+            background-size: 1.333rem;
+            width: 1.833rem;
+        }
     }
 }
 .search-select {
@@ -383,4 +398,9 @@
     background-position: right 1rem center;
     background-size: 0.75rem;
     background-repeat: no-repeat;
+    @include respond-to(max-width, con) {
+        width: 7.5rem;
+        font-size: 1rem;
+        flex: 0 0 auto;
+    }
 }

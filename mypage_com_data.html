@@ -25,7 +25,138 @@
 </head>
 
 <body>
-    <div class="wrap">
+    <div class="wrap grey">
+
+        <!-- 구독.좋아요 모달 -->
+        <aside class="modal active">
+            <div class="modal-container">
+                <div class="modal-header">
+                    <h3 class="modal-title">구독 좋아요</h3>
+                    <button class="modal-close" onclick="closeModal(event);"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="body-content subscribe-content">
+                        <div class="content-top">03.23 (월) 현재 <strong>300</strong>명</div>
+                        <ul class="subscriber-list">
+                            <li class="grid v-center">
+                                <div class="modal-profile grid v-center">
+                                    <div class="profile-img" style="background-image:url('/images/img-test.png');"></div>
+                                    강호동
+                                </div>
+                                <button type="button" class="sub-info__btn" title="회원정보">회원정보</button>
+                            </li>
+
+                            <li class="grid v-center">
+                                <div class="modal-profile grid v-center">
+                                    <div class="profile-img" style="background-image:url('/images/img-test.png');"></div>
+                                    강호동
+                                </div>
+                                <button type="button" class="sub-info__btn" title="회원정보">회원정보</button>
+                            </li>
+
+                            <li class="grid v-center">
+                                <div class="modal-profile grid v-center">
+                                    <div class="profile-img" style="background-image:url('/images/img-test.png');"></div>
+                                    강호동
+                                </div>
+                                <button type="button" class="sub-info__btn" title="회원정보">회원정보</button>
+                            </li>
+
+                            <li class="grid v-center">
+                                <div class="modal-profile grid v-center">
+                                    <div class="profile-img" style="background-image:url('/images/img-test.png');"></div>
+                                    강호동
+                                </div>
+                                <button type="button" class="sub-info__btn" title="회원정보">회원정보</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- 참여하고 싶어요 모달 -->
+        <aside class="modal active">
+            <div class="modal-container">
+                <div class="modal-header">
+                    <h3 class="modal-title">구독 좋아요</h3>
+                    <button class="modal-close" onclick="closeModal(event);"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="body-content participate-content">
+                        <div class="participate-top">
+                            <div class="participate-num">
+                                참여요청 <b>100</b>
+                            </div>
+                        </div>
+                        <section class="participate-section">
+                            <div class="content-top grid">03.23 (월) <strong>3</strong>명</div>
+                            <ul class="participate-list">
+                                <li class="grid v-center">
+                                    <div class="modal-profile grid v-center">
+                                        <div class="profile-img" style="background-image:url('/images/img-test.png');"></div>
+                                        강호동
+                                    </div>
+                                    <div class="btn-wrap">
+                                        <button type="button" class="p-btn delete">삭제</button>
+                                        <button type="button" class="p-btn">승인</button>
+                                    </div>
+                                </li>
+
+                                <li class="grid v-center">
+                                    <div class="modal-profile grid v-center">
+                                        <div class="profile-img" style="background-image:url('/images/img-test.png');"></div>
+                                        강호동
+                                    </div>
+                                    <div class="btn-wrap">
+                                        <button type="button" class="p-btn delete">삭제</button>
+                                        <button type="button" class="p-btn">승인</button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </section>
+
+                        <section class="participate-section">
+                            <div class="content-top grid">03.23 (월) <strong>3</strong>명</div>
+                            <ul class="participate-list">
+                                <li class="grid v-center">
+                                    <div class="modal-profile grid v-center">
+                                        <div class="profile-img" style="background-image:url('/images/img-test.png');"></div>
+                                        강호동
+                                    </div>
+                                    <div class="btn-wrap">
+                                        <button type="button" class="p-btn delete">삭제</button>
+                                        <button type="button" class="p-btn">승인</button>
+                                    </div>
+                                </li>
+
+                                <li class="grid v-center">
+                                    <div class="modal-profile grid v-center">
+                                        <div class="profile-img" style="background-image:url('/images/img-test.png');"></div>
+                                        강호동
+                                    </div>
+                                    <div class="btn-wrap">
+                                        <button type="button" class="p-btn delete">삭제</button>
+                                        <button type="button" class="p-btn">승인</button>
+                                    </div>
+                                </li>
+
+                                <li class="grid v-center">
+                                    <div class="modal-profile grid v-center">
+                                        <div class="profile-img" style="background-image:url('/images/img-test.png');"></div>
+                                        강호동
+                                    </div>
+                                    <div class="btn-wrap">
+                                        <button type="button" class="p-btn delete">삭제</button>
+                                        <button type="button" class="p-btn">승인</button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </aside>
 
         <!-- 헤더 -->
         <header class="header">
@@ -194,9 +325,9 @@
                     </ul>
                     <div class="mypage-approval-list">
                         <!-- 데이터 없을때 -->
-                        <!--div class="mypage-approval_nodata">
+                        <div class="mypage-approval_nodata">
                             <p>등록한 현장이 없습니다.</p>
-                        </div-->
+                        </div>
                         <!-- 데이터 없을때 -->
 
                         <ul class="mypage-approval_data">
