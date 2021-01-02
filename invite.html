@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="kr">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <meta name="robots" content="index,follow"/>
+        <meta name="theme-color" content="#B51E24">
+        <meta name="description" content="리홈 - Real Home"/>
+        <meta name="keywords" content=""/>
+        <meta name="author" content="리홈"/>
+        <meta property="og:title" content="리홈"/>
+        <meta property="og:description" content="">
+        <meta property="og:site_name" content="리홈"/>
+        <meta property="og:type" content="website"/>
+        <!-- <meta property="og:url" content=""/> -->
+        <meta property="og:image" content="/images/og-image.jpg"/>
+        <link rel="stylesheet" href="style/app.css"/>
+        <link rel="stylesheet" href="style/swiper.css"/>
+        <script src="js/swiper.min.js"></script>
+        <script src="js/global.js"></script>
+        <title>리홈</title>
+    </head>
+    <body>
+        <div class="wrap">
+            <!-- 헤더 -->
+            <header class="header">
+                <div class="hd-wrap">
+                    <div class="layout grid v-center">
+                        <h1 class="logo">
+                            <a href="#">
+                                <img src="./images/logo.svg" title="Real Home 로고" alt="Real Home" />
+                            </a>
+                        </h1>
+                        <nav class="main-nav">
+                            <ul class="main-nav__list grid v-center">
+                                <li>
+                                    <a href="#" class="active">
+                                        <span>현장</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>저장</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>회원관리</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>내정보</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <button class="menu-btn" title="메뉴 버튼" onclick="showSideMenu();">
+                            <img src="./images/ico-menu.svg" alt=""/>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 사이드메뉴 -->
+                <aside class="side-menu grid">
+                    <button class="side-menu__close" title="닫기" onclick="removeSideMenu();"></button>
+                    <section class="side-menu__hd">
+                        <div class="hd-content grid">
+                            <a href="#" class="hd-btn">로그아웃</a>
+                            <a href="#" class="hd-btn">마이페이지</a>
+                        </div>
+                    </section>
+                    <section class="side-menu__body">
+                        <div class="body-top">
+                            <mark class="user-mark company">
+                                <span>기업</span>
+                                시행사
+                            </mark>
+                            <h3 class="body-top__title">
+                                <b>유재석</b> 님, 반갑습니다.
+                            </h3>
+                        </div>
+                        <nav class="body-nav">
+                            <ul class="body-nav__list">
+                                <li>
+                                    <a href="#">알림 및 공지사항 관리<img src="./images/ico-new.svg" alt="new"/></a>
+                                </li>
+                                <li>
+                                    <a href="#">이용안내</a>
+                                </li>
+                                <li>
+                                    <a href="#">리얼홈 소개</a>
+                                </li>
+                                <li>
+                                    <a href="#">설정</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </section>
+                    <section class="side-menu__ft">
+                        <p class="txt">리홈 고객센터</p>
+                        <h5 class="num grid v-center">1544-1234 <img src="./images/ico-phone_radius.svg" alt=""/></h5>
+                        <p class="date">월 - 금  9시-18시 / 토, 일 공휴일 휴무</p>
+                    </section>
+                </aside>
+                
+                <h2 class="header-title">초대하기</h2>
+            </header>
+
+            <!-- 초대하기 -->
+            <div class="layout invite-layout">
+                <div class="container">
+                   <div class="invite-wrap">
+                       <h3 class="invite-title">
+                        리얼홈 분양현장으로<br/>
+                        <b>상담사</b>를 초대해 보세요.
+                       </h3>
+                       <div class="invite-site" style="background-image:url('/images/test-test.png');">
+                        <div class="dimmer"></div>
+                        <mark class="site-status">진행</mark>
+                        <div class="site-txt">
+                            <p class="site-grade">
+                                <span>팀장/팀원</span>
+                                <span>기본급</span>
+                            </p>
+                            <h4 class="site-name">광명 푸르지오 센트베르</h4>
+                        </div>
+                       </div>
+                       <div class="btn-wrap">
+                           <button class="btn kakao">카카오톡으로 초대하기</button>
+                           <button class="btn">URL 링크로 초대하기</button>
+                       </div>
+                   </div>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>

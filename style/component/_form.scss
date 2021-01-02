@@ -24,9 +24,15 @@
             }
         }
         .date-sel {
+            @include respond-to(max-width, con) {
+                width: 100%;
+            }
             & > span {
                 display: inline-block;
                 margin: 0 1.3rem;
+                @include respond-to(max-width, con) {
+                    margin: 0 1rem;
+                }
             }
             .f-select {
                 margin-top: 0 !important;
@@ -36,6 +42,14 @@
                 }
                 &.mon {
                     width: 6.875rem;
+                }
+                @include respond-to(max-width, con) {
+                    &.year {
+                        width: 25%;
+                    }
+                    &.mon {
+                        width: 25%;
+                    }
                 }
             }
         }

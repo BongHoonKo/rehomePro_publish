@@ -36,19 +36,22 @@
                 <div class="container">
                     <!-- 상세정보 입력 -->
                     <section class="input-section">
-                        <h4 class="section-title">상세정보를 입력해 주세요</h4>
-                        <form class="form">
+                        <h4 class="section-title">
+                            <button type="button" class="back-btn" title="뒤로가기"></button>
+                            <b>상세정보</b>를 <br class="m"/>입력해 주세요
+                        </h4>
+                        <form class="form reg-form">
                             <fieldset>
                                 <label class="f-label" for="f-name">이름</label>
-                                <input type="text" name="myname" class="f-input" id="f-email" value=""/>
+                                <input type="text" name="myname" class="f-input" id="f-name" placeholder="이름" value=""/>
                             </fieldset>
                             <fieldset>
                                 <label class="f-label" for="f-name">이메일</label>
-                                <input type="email" name="myemail" class="f-input" id="f-email" value=""/>
+                                <input type="email" name="myemail" class="f-input" id="f-email" placeholder="이메일" value=""/>
                             </fieldset>
                             <fieldset>
                                 <label class="f-label" for="f-phone">전화번호</label>
-                                <input type="tel" name="myemail" class="f-input" id="f-phone" value=""/>
+                                <input type="tel" name="myemail" class="f-input" id="f-phone" placeholder="전화번호" value=""/>
                             </fieldset>
 
                             <fieldset>
@@ -62,8 +65,8 @@
 
                     <!-- 업무이력 -->
                     <section class="input-section">
-                        <h4 class="section-title"><b>업무 이력</b> (선택)</h4>
-                        <form class="form">
+                        <h4 class="section-title sect"><b>업무 이력</b> (선택)</h4>
+                        <form class="form reg-form">
                             <div class="fieldset-wrap">
                                 <fieldset>
                                     <label class="f-label" for="f-siteName">현장명</label>
@@ -136,8 +139,8 @@
 
                     <!-- 유료회원 현장 관리 수 선택 -->
                     <section class="input-section">
-                        <h4 class="section-title"><b>유료회원 현장 관리 수 선택</b></h4>
-                        <form class="form">
+                        <h4 class="section-title sect"><b>유료회원 현장 관리 수 선택</b></h4>
+                        <form class="form reg-form">
                             <fieldset>
                                 <label class="f-label" for="f-siteNum" hidden>현장 관리 수</label>
                                 <select name="NumerOfSites" class="f-select" id="f-siteNum">
