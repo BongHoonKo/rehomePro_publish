@@ -13,6 +13,12 @@
 .design-search__wrap {
     margin-bottom: 3.75rem;
     text-align: center;
+    @include respond-to(max-width, con) {
+        padding: 1.65rem 20px;
+        background-color: white;
+        margin-bottom: 0;
+        border-bottom: 0.666rem solid #EAEAEA;
+    }
 }
 .design-list__section {
     .design-list {
@@ -58,6 +64,49 @@
                 position: absolute;
                 bottom: 1.5rem;
                 right: 3.5625rem;
+            }
+        }
+
+        @include respond-to(max-width, con) {
+            & > li {
+                width: 100%;
+                margin-bottom: 0;
+                border-bottom: 0.666rem solid #EAEAEA;
+                &:nth-of-type(2n) {
+                    padding-left: 0;
+                }
+                &:nth-of-type(2n+1) {
+                    padding-right: 0;
+                }
+                .design-list__box {
+                    padding: 1.333rem 20px;
+                }
+
+                .design-list__info {
+                    font-size: 1.165rem;
+                    margin-bottom: 1rem;
+                    & > dt {
+                        width: 27.5%;
+                        margin-bottom: 0.5rem;
+                    }
+                    & > dd {
+                        width: 62.5%;
+                    }
+                }
+                .date {
+                    margin-left: 27.5%;
+                }
+                .like-check__wrap {
+                    position: absolute;
+                    bottom: 1.583rem;
+                    right: 2.25rem;
+                    .like-check__label {
+                        font-size: 1rem;
+                        & > svg {
+                            width: 1.165rem;
+                        }
+                    }
+                }
             }
         }
     }
@@ -229,6 +278,9 @@
             }
         }
     }
+    @include respond-to(max-width, con) {
+        display: none;
+    }
 }
 .design-register__tabpanel {
     background-color: white;
@@ -237,6 +289,47 @@
         width: 46.5625rem;
         margin-left: auto;
         margin-right: auto;
+    }
+    @include respond-to(max-width, con) {
+        padding: 2.1666rem 20px;
+        .form {
+            width: 100%;
+            fieldset {
+                & + fieldset {
+                    margin-top: 0.8333rem;
+                }
+            }
+            .f-label {
+                display: none;
+            }
+            .f-input, .f-select {
+                border: 0;
+                border-bottom: 1.5px solid #E3E3E3;
+                padding: 0.8333rem 0.5rem;
+                font-size: 1.165rem;
+            }
+            .f-select {
+                padding-right: 2.5rem;
+            }
+            .input-wrap {
+                position: relative;
+                .f-input {
+                    width: 100%;
+                    margin-right: 0;
+                }
+                .btn {
+                    position: absolute;
+                    border: 0;
+                    height: auto;
+                    font-size: 1rem;
+                    right: 0;
+                    top: 50%;
+                    padding: 0.5rem 1.333rem;
+                    font-weight: 500;
+                    transform: translateY(-50%);
+                }
+            }
+        }
     }
 }
 
@@ -258,6 +351,27 @@
                 }
                 &.main {
                     width: 65%;
+                }
+            }
+        }
+    }
+}
+
+.design-reg__ft {
+    @include respond-to(max-width, con) {
+        bottom: 5rem;
+        height: 3.65rem;
+        padding: 0;
+        .btn-wrap {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            .btn {
+                height: 100%;
+                margin: 0 !important;
+                font-size: 1.165rem;
+                &.main {
+                    width: 100%;
                 }
             }
         }

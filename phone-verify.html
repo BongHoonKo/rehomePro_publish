@@ -35,8 +35,11 @@
             <div class="layout register-layout">
                 <div class="container">
                     <section class="input-section">
-                        <h4 class="section-title"><b>휴대전화 번호</b>를 인증해 주세요</h4>
-                        <form class="form">
+                        <button type="button" class="back-btn" title="뒤로가기"></button>
+                        <h4 class="section-title">
+                            <b>휴대전화 번호</b>를 <br class="m"/>인증해 주세요
+                        </h4>
+                        <form class="form phone-verify__form">
                             <fieldset>
                                 <label class="f-label" for="f-phone">휴대전화 번호</label>
                                 <div class="input-wrap phone grid v-center">
@@ -48,15 +51,11 @@
                                 <label class="f-label" for="f-vNum">인증번호</label>
                                 <input type="number" name="verify code" class="f-input" id="f-vNum" value="123"/>
                             </fieldset>
-                            <div class="button-wrap grid h-center">
-                                <button class="btn" disabled>다음</button>
-                                <button class="btn active">다음</button>
-                            </div>
                         </form>
                     </section>
                     <div class="button-wrap grid h-center">
                         <button class="btn active">다음</button>
-                        <button class="btn active" disabled>다음</button>
+                        <!-- <button class="btn active" disabled>다음</button> -->
                     </div>
                 </div>
             </div>

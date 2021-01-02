@@ -50,11 +50,32 @@
                 margin-right: 0.75rem;
                 font-weight: normal;
             }
+            @include respond-to(max-width, con) {
+                padding: 1.8333rem 2.5rem;
+                padding-top: 0;
+                text-align: left;
+                font-size: 1.165rem;
+                border-bottom: 0.666rem solid #EAEAEA;
+                margin-bottom: 1.165rem;
+                & > span {
+                    margin-right: 1.65rem;
+                }
+            }
         }
         .commuting-filter {
             margin-bottom: 1.875rem;
             .search-select {
                 margin-left: auto;
+            }
+            @include respond-to(max-width, con) {
+                padding: 0 20px;
+                margin-bottom: 1.65rem;
+                .search-select {
+                    margin-right: 0;
+                    border-radius: 4px;
+                    font-size: 1rem;
+                    color: black;
+                }
             }
         }
     }
@@ -391,6 +412,10 @@
         background-color: #E3E3E3;
         text-align: center;
         padding: 0.75rem;
+        @include respond-to(max-width, con) {
+            font-size: 1.165rem;
+            padding: 0.8333rem;
+        }
     }
     .commute-check {
         padding: 1.875rem 0;
@@ -404,11 +429,19 @@
             text-align: center;
             font-size: 1.0625rem;
             font-weight: normal;
+            @include respond-to(max-width, con) {
+                width: 9rem;
+                height: 9rem;
+                font-size: 1.165rem;
+            }
             & > strong {
                 font-size: 2rem;
                 font-weight: 500;
                 display: block;
                 margin-bottom: 0.5rem;
+                @include respond-to(max-width, con) {
+                    font-size: 2.165rem;
+                }
             }
             & + .commute-btn {
                 margin-left: 2.5rem;

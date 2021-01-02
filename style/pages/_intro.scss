@@ -1,35 +1,76 @@
-.intro-content {
-    background-color: white;
-    padding: 3.375rem 13.25rem 1.875rem 13.25rem;
-    border-top: 3px solid $main-color;
-    .intro-title {
-        font-size: 2rem;
-        font-weight: 500;
-        padding-bottom: 2.875rem;
-        line-height: 1;
-        text-align: center;
-    }
-    .intro-section {
-        padding: 3.125rem;
-        padding-left: 22.9375rem;
-        position: relative;
-        border-top: 1.5px solid #EBEBEB;
-        .intro-logo {
-            position: absolute;
-            left: 9.125rem;
-            top: 4.0625rem;
+.intro-layout {
+    .intro-content {
+        background-color: white;
+        padding: 3.375rem 13.25rem 1.875rem 13.25rem;
+        border-top: 3px solid $main-color;
+        .intro-title {
+            font-size: 2rem;
+            font-weight: 500;
+            padding-bottom: 2.875rem;
+            line-height: 1;
+            text-align: center;
         }
-        .intro-list {
-            & > li {
-                display: flex;
-                font-size: 1.0625rem;
-                font-weight: normal;
-                & + li {
-                    margin-top: 0.625rem;
+        .intro-section {
+            padding: 3.125rem;
+            padding-left: 22.9375rem;
+            position: relative;
+            border-top: 1.5px solid #EBEBEB;
+            .intro-logo {
+                position: absolute;
+                left: 9.125rem;
+                top: 4.0625rem;
+            }
+            .intro-list {
+                & > li {
+                    display: flex;
+                    font-size: 1.0625rem;
+                    font-weight: normal;
+                    & + li {
+                        margin-top: 0.625rem;
+                    }
+                    & > span {
+                        width: 8rem;
+                        color: #8E8E8E;
+                    }
                 }
-                & > span {
-                    width: 8rem;
-                    color: #8E8E8E;
+            }
+        }
+    }
+    @include respond-to(max-width, con) {
+        .container {
+            padding: 0;
+        }
+        .intro-content {
+            padding: 3.333rem 0;
+            border: 0;
+            .intro-title {
+                display: none;
+            }
+            .intro-section {
+                padding: 0;
+                border: 0;
+                & + .intro-section {
+                    border-top: 1px solid #E3E3E3;
+                    margin-top: 2.666rem;
+                    padding-top: 2.5rem;
+                }
+                .intro-logo {
+                    position: static;
+                    margin: 0 auto;
+                    margin-bottom: 3rem;
+                    width: 6.666rem;
+                    display: block;
+                }
+                .intro-list {
+                    & > li {
+                        font-size: 1.165rem;
+                        & + li {
+                            margin-top: 1.165rem;
+                        }
+                        & > span {
+                            width: 9rem;
+                        }
+                    }
                 }
             }
         }

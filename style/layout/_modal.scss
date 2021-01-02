@@ -16,7 +16,9 @@
             .body-content {
                 padding: 3.75rem 5.625rem;
                 @include respond-to(max-width, con) {
-                    padding: 2.5rem 0 5rem 0;
+                    // padding: 2.5rem 0 5rem 0;
+                    padding: 0;
+                    padding-bottom: 5rem;
                 }
             }
         }
@@ -97,8 +99,27 @@
                         margin-bottom: 3.0625rem;
                         text-align: center;
                     }
-                    .button-wrap .bottom-btn {
-                        border-radius: 2px;
+                    .button-wrap {
+                        position: static;
+                        .bottom-btn {
+                            border-radius: 2px;
+                        }
+                    }
+                }
+            }
+        }
+        @include respond-to(max-width, con) {
+            .modal-container {
+                flex-direction: row;
+                .modal-body {
+                    margin: auto 0;
+                    height: auto;
+                    .body-content {
+                        padding: 2.9rem 1.666rem 1.165rem;
+                        .success-txt {
+                            font-size: 1.333rem;
+                            margin-bottom: 2.75rem;
+                        }
                     }
                 }
             }
@@ -222,6 +243,9 @@
         }
         .body-content {
             padding: 3.75rem 2.625rem;
+            @include respond-to(max-width, con) {
+                padding-bottom: 3.5rem;
+            }
             &.subscribe-content {
                 padding-top: 0;
                 padding-left: 5rem;
@@ -408,13 +432,34 @@
                 }
             }
             .button-wrap {
+                @include respond-to(max-width, con) {
+                    position: fixed;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                }
                 .bottom-btn {
                     padding: 0 0.5rem;
                     height: 3.5rem;
                     min-width: 10.25rem;
                     flex: 1 1 auto;
+                    @include respond-to(max-width, con) {
+                        font-size: 1.165rem;
+                        min-width: 0;
+                        //border-radius: 2px;
+                    }
+                    &:not(:only-of-type) {
+                        @include respond-to(max-width, con) {
+                            margin: 0;
+                            width: 40%;
+                        }
+                    }
                     & + .bottom-btn {
                         margin-left: 0.5rem;
+                        @include respond-to(max-width, con) {
+                            margin: 0;
+                            width: 60%;
+                        }
                     }
                     &.main {
                         color: white;
@@ -426,7 +471,11 @@
                     }
                     &:only-of-type {
                         min-width: 17.5rem;
+                        max-width: 100%;
                         flex: 0 0 auto;
+                        @include respond-to(max-width, con) {
+                            width: 100%;
+                        }
                     }
                     &.close {
                         color: white;
@@ -447,6 +496,7 @@
                 margin-bottom: 4rem;
                 @include respond-to(max-width, con) {
                     margin-bottom: 2.7rem;
+                    padding-top: 2.5rem;
                 }
                 & > span {
                     border-bottom: 2px solid black;
@@ -566,7 +616,8 @@
             .comp-wrap {
                 margin-bottom: 3.75rem;
                 @include respond-to(max-width, con) {
-                    margin-top: -2.5rem;
+                    //margin-top: -2.5rem;
+                    margin-bottom: 0;
                 }
                 .col {
                     &[class*='size_'] {
@@ -653,6 +704,10 @@
             }
             .detail-content {
                 padding: 0 5.625rem;
+                @include respond-to(max-width, con) {
+                    padding: 1.4rem 20px;
+                    padding-bottom: 0;
+                }
                 & + .button-wrap {
                     margin-top: 4.375rem;
                 }
@@ -670,6 +725,21 @@
                         color: #5A5A5A;
                         font-weight: normal;
                     }
+                    @include respond-to(max-width, con) {
+                        background-color: white;
+                        border-top: 0;
+                        border-bottom-color: #E3E3E3;
+                        padding: 0 0.25rem 1.45rem 0.25rem;
+                        display: block;
+                        font-size: 1.165rem;
+                        margin-bottom: 0;
+                        .date {
+                            display: block;
+                            padding-left: 0;
+                            font-size: 1rem;
+                            margin-top: 0.5rem;
+                        }
+                    }
                 }
                 .detail-txt {
                     padding: 1.5rem 1.875rem;
@@ -678,6 +748,10 @@
                     white-space: pre-line;
                     line-height: 1.5;
                     overflow-y: auto;
+                    @include respond-to(max-width, con) {
+                        padding: 2.125rem 0.25rem;
+                        font-size: 1.165rem;
+                    }
                 }
                 .detail-add__input {
                     width: 100%;
@@ -689,6 +763,15 @@
                     padding: 1rem 1.875rem;
                     font-size: 1rem;
                     font-weight: bold;
+                    @include respond-to(max-width, con) {
+                        border-bottom: 1.5px solid #E3E3E3;
+                        border-top: 0;
+                        padding: 0 0 0.8333rem 0.5rem;
+                        background-color: white;
+                        font-size: 1.165rem;
+                        font-weight: 500;
+                        margin-bottom: 1.65rem;
+                    }
                 }
                 .detail-add__textarea {
                     width: 100%;
@@ -699,6 +782,9 @@
                     white-space: pre-line;
                     line-height: 1.5;
                     overflow-y: auto;
+                    @include respond-to(max-width, con) {
+                        border: 1.5px solid #E3E3E3;
+                    }
                 }
             }
             .position-check {

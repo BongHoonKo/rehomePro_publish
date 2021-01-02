@@ -30,4 +30,29 @@
             }
         }
     }
+    @include respond-to(max-width, con) {
+        .container {
+            padding: 0;
+        }
+        .guide-section {
+            padding: 0;
+            border-top: 0;
+            .guide-title {
+                display: none;
+            }
+            .guide-list {
+                & > li {
+                    font-size: 1.165rem;
+                    font-weight: 500;
+                    padding: 0;
+                    & > a {
+                        padding: 1.333rem 0;
+                        border-color: #E3E3E3;
+                        background-position: right 1.65rem center;
+                        background-size: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
 }

@@ -36,19 +36,27 @@
                 <div class="container">
                     <!-- 상세정보 입력 -->
                     <section class="input-section">
-                        <h4 class="section-title">상세정보를 입력해 주세요</h4>
-                        <form class="form">
+                        <h4 class="section-title">
+                            <button type="button" class="back-btn" title="뒤로가기"></button>
+                            <b>상세정보</b>를 <br class="m"/>입력해 주세요
+                        </h4>
+
+                        <div class="reg-img">
+                            <div class="profile-img" style="background-image: url('/images/img-test.png');"></div>
+                            <button type="button" class="img-add" title="사진추가">사진추가</button>
+                        </div>
+                        <form class="form reg-form">
                             <fieldset>
                                 <label class="f-label" for="f-name">이름</label>
-                                <input type="text" name="myname" class="f-input" id="f-email" value=""/>
+                                <input type="text" name="myname" class="f-input" id="f-email" placeholder="이름" value=""/>
                             </fieldset>
                             <fieldset>
                                 <label class="f-label" for="f-name">이메일</label>
-                                <input type="email" name="myemail" class="f-input" id="f-email" value=""/>
+                                <input type="email" name="myemail" class="f-input" id="f-email" placeholder="이메일" value=""/>
                             </fieldset>
                             <fieldset>
                                 <label class="f-label" for="f-phone">전화번호</label>
-                                <input type="tel" name="myemail" class="f-input" id="f-phone" value=""/>
+                                <input type="tel" name="myemail" class="f-input" id="f-phone" placeholder="전화번호" value=""/>
                             </fieldset>
 
                             <fieldset>
@@ -62,8 +70,8 @@
 
                     <!-- 회사정보 이력 -->
                     <section class="input-section">
-                        <h4 class="section-title"><b>회사정보 이력</b> (필수)</h4>
-                        <form class="form">
+                        <h4 class="section-title sect"><b>회사정보 이력</b> (필수)</h4>
+                        <form class="form reg-form">
                             <fieldset>
                                 <label class="f-label" for="f-field">분야선택</label>
                                 <select name="myfield" class="f-select" id="f-field">
@@ -98,10 +106,10 @@
 
                     <!-- 기타 정보 -->
                     <section class="input-section">
-                        <h4 class="section-title"><b>기타 정보</b></h4>
-                        <form class="form">
+                        <h4 class="section-title sect"><b>기타 정보</b></h4>
+                        <form class="form reg-form">
                             <fieldset>
-                                <label class="f-label">사업자등록증 첨부</label>
+                                <label class="f-label">법인등기부등본 첨부</label>
                                 <input type="file" name="Corporate registration copy" class="f-file" id="f-corpRegCopy" hidden/>
                                 
                                 <div class="input-wrap grid v-center">
@@ -114,8 +122,8 @@
 
                     <!-- 유료회원 현장 관리 수 선택 -->
                     <section class="input-section">
-                        <h4 class="section-title"><b>유료회원 현장 관리 수 선택</b></h4>
-                        <form class="form">
+                        <h4 class="section-title sect"><b>유료회원 현장 관리 수 선택</b></h4>
+                        <form class="form reg-form">
                             <fieldset>
                                 <label class="f-label" for="f-siteNum" hidden>현장 관리 수</label>
                                 <select name="NumerOfSites" class="f-select" id="f-siteNum">
@@ -140,7 +148,7 @@
                                 <div class="pay-info">
                                     <p>회비 납부 안내 (은행, 계좌번호, 구좌수)</p>
                                     <ul class="pay-info__list">
-                                        <li>- 1현장 등록시 등록비 : 월 150,000원 / 연 1,500,000원 부가세 별도</li>
+                                        <li>- 1현장 등록시 등록비 :<br class="m"/> 월 150,000원 / 연 1,500,000원 부가세 별도</li>
                                         <li>- 추가 현장 선택 등록비 추가 비용 동일</li>
                                     </ul>
                                 </div>

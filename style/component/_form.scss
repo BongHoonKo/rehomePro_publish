@@ -12,6 +12,8 @@
     fieldset {
         border: 0;
         padding: 0;
+        margin: 0;
+        width: 100%;
         & + fieldset {
             margin-top: 2.5rem;
         }
@@ -94,6 +96,13 @@
                             fill: $main-color;
                         }
                     }
+                }
+            }
+        }
+        .radio-wrap {
+            @include respond-to(max-width, con) {
+                &:first-child {
+                    margin-top: 1.65rem;
                 }
             }
         }
@@ -211,6 +220,7 @@
             width: 100%;
             .f-input {
                 width: auto;
+                max-width: 100%;
                 flex: 1 1 auto;
                 margin-right: 1rem;
             }
@@ -321,6 +331,9 @@
             color: #C3C3C3;
             font-size: 1.125rem;
             font-weight: normal;
+            @include respond-to(max-width, con) {
+                font-size: 1rem;
+            }
         }
     }
 }

@@ -2,11 +2,179 @@
     .container {
         padding-top: 5.625rem;
         padding-bottom: 7.75rem;
+        @include respond-to(max-width, con) {
+          padding-top: 2.165rem;
+          padding-bottom: 2.165rem;
+        }
+    }
+    .reg-img {
+      text-align: center;
+      margin-bottom: 2.5rem;
+      .profile-img {
+        margin: 0 auto;
+        margin-bottom: 0.5rem;
+      }
+      @include respond-to(max-width, con) {
+        margin-bottom: 3.5rem;
+        .profile-img {
+          width: 8rem;
+          height: 8rem;
+          margin-bottom: 1rem;
+        }
+      }
+      .img-add {
+        color: $main-color;
+        font-size: 0.75rem;
+        @include respond-to(max-width, con) {
+          font-size: 1rem;
+        }
+      }
     }
     .input-section {
         width: 745px;
         margin-left: auto;
         margin-right: auto;
+        br.m {
+          display: none;
+        }
+        .back-btn {
+          display: none;
+        }
+        @include respond-to(max-width, con) {
+          width: 100%;
+          & + .input-section {
+            margin-top: 3.83rem;
+          }
+          br.m {
+            display: block;
+          }
+          .back-btn {
+            display: block;
+            width: 2.165rem;
+            height: 2.165rem;
+            background-image: url('/images/ico-back.svg');
+            background-size: 0.8333rem;
+            background-repeat: no-repeat;
+            background-position: 0.5rem center;
+            margin-bottom: 1.125rem;
+          }
+          .section-title:not(.sect) {
+            border: 0;
+            font-size: 2rem;
+            padding-left: 0.5rem;
+            padding-bottom: 0;
+            margin-bottom: 3.75rem;
+          }
+          .section-title.sect {
+            border: 0;
+            font-size: 1.333rem;
+            padding-bottom: 1.165rem;
+            padding-left: 0.5rem;
+            margin-bottom: 0;
+            & > b {
+              font-weight: bold;
+            }
+          }
+          .reg-form {
+            fieldset {
+              & + fieldset {
+                margin-top: 0.8333rem;
+              }
+              .f-label {
+                display: none;
+              }
+              .f-input, .f-select {
+                border: 0;
+                border-bottom: 1.5px solid #E3E3E3;
+                padding: 0.8333rem 0.416rem;
+                font-size: 1.165rem;
+              }
+              .f-select {
+                color: #727272;
+                font-weight: 500;
+              }
+              .input-wrap {
+                position: relative;
+                .f-input {
+                    width: 100%;
+                    margin-right: 0;
+                }
+                .btn {
+                    position: absolute;
+                    border: 0;
+                    height: 100%;
+                    font-size: 1rem;
+                    right: 0;
+                    top: 50%;
+                    padding: 0 1.333rem;
+                    font-weight: 500;
+                    transform: translateY(-50%);
+                    display: flex;
+                    align-items: center;
+                }
+            }
+            }
+          }
+          .phone-verify__form {
+            fieldset {
+              & + fieldset {
+                margin-top: 1.65rem;
+              }
+              .f-label {
+                font-size: 1.165rem;
+                color: #727272;
+                font-weight: 500;
+                margin-bottom: 0;
+              }
+              .f-input {
+                border: 0;
+                border-bottom: 1.5px solid #E3E3E3;
+                padding: 0.8333rem 0.5rem;
+                font-size: 1.165rem;
+              }
+              .input-wrap {
+                position: relative;
+                .f-input {
+                  margin-right: 0;
+                  padding-right: 6.5rem;
+                  width: 100%;
+                }
+                .btn {
+                  position: absolute;
+                  right: 0.5rem;
+                  height: 2.165rem;
+                  padding: 0 0.8333rem;
+                  border-radius: 300rem;
+                  font-size: 1rem;
+                  font-weight: 500;
+                  top: 50%;
+                  transform: translateY(-50%);
+                }
+              }
+            }
+          }
+          & + .button-wrap {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            .btn {
+              padding-top: 1.165rem;
+              padding-bottom: 1.165rem;
+              font-size: 1.333rem;
+              &:only-of-type {
+                width: 100%;
+              }
+              &:not(:only-of-type) {
+                width: 65%;
+                margin: 0;
+                &.cancel {
+                  width: 35%;
+                }
+              }
+            }
+          }
+        }
     }
 }
 
